@@ -48,7 +48,7 @@
     </div>
     <div class="blok2">
         <form class="formpje" action="">
-            <input class="formpje" type="text" placeholder="Waar begint uw vlucht?">
+            <input class="formpje" type="text" placeholder="Waar begint uw vlucht en wat is uw locatie?">
         </form>
         <form class="formpje" action="">
             <input class="formpje" type="text" placeholder="Waar gaat uw vlucht heen?">
