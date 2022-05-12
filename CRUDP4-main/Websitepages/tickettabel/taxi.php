@@ -48,10 +48,10 @@
     </div>
     <div class="blok2">
         <form class="formpje" action="">
-            <input class="formpje" type="text" placeholder="Waar begint uw vlucht?">
+            <input class="formpje" type="text" placeholder="Wat voor auto wilt u?">
         </form>
         <form class="formpje" action="">
-            <input class="formpje" type="text" placeholder="Waar gaat uw vlucht heen?">
+            <input class="formpje" type="text" placeholder="Hoelang wilt u de auto?">
         </form>
         <form class="formpje1" action="">
             <input class="formpje10" type="date" placeholder="Heen">
