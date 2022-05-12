@@ -1,3 +1,11 @@
+<?php 
+	include('../php/functions.php');
+	// if (!isAdmin()) {
+	// 	$_SESSION['msg'] = "You must log in first";
+	// 	header('location: login.php');
+	// }
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +25,10 @@
         <a href="vluchten.php">Vluchten</a>
         <a href="">Over ons</a>
         <a href="">Contact</a>
-        <a href="">Login</a>
+        <a href="./account/login.php">Login</a>
+    </div>
+    <div class="profile-info-container">
+        <h2 class="profile-username">@<?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?></h2>
     </div>
 </header>
 <header class="headerblokjes">
