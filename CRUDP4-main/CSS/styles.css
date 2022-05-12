@@ -28,6 +28,13 @@ header{
 
 }
 
+  .profile-username {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    display: flex;
+    font-family: "Nunito", sans-serif;
+}
+
 
 .headerblokjes{
     width: 100%;
