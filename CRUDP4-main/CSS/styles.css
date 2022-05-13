@@ -241,4 +241,36 @@ header{
 }
 h3{
     color: whitesmoke;
+
+}
+
+.blok22{
+    width: 75%;
+    height: 350px;
+    background-color: whitesmoke;
+    opacity: .8;
+    display: flex;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.containerblok22{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corendon{
+    margin: 20px;
+    display: flex;
+}
+
+.overons{
+   margin-left: 250px;
+display: flex;
+}
+
+
+.container3{
+
 }

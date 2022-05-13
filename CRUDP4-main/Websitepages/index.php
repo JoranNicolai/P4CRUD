@@ -15,7 +15,7 @@
     <div class="headersearch">
         <a href="index.php">Home</a>
         <a href="vluchten.php">Vluchten</a>
-        <a href="">Over ons</a>
+        <a href="overons.php">Over ons</a>
         <a href="">Contact</a>
         <a href="">Login</a>
     </div>
