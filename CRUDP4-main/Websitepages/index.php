@@ -26,6 +26,11 @@
         <a href="">Over ons</a>
         <a href="">Contact</a>
         <a href="./account/login.php">Login</a>
+        <?php
+        if (isAdmin()) {
+                echo "<a href=\"./account/login.php\">Admin</a>";
+            }
+        ?>
     </div>
     <div class="profile-info-container">
         <h2 class="profile-username">@<?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?></h2>
