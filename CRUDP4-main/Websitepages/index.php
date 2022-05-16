@@ -24,9 +24,11 @@
         <a href="index.php">Home</a>
         <a href="vluchten.php">Vluchten</a>
         <a href="overons.php">Over ons</a>
-
-        <a href="contact.php">Contact</a>
-        <a href="">Login</a>
+        <a href="">Contact</ a>
+        <a href="./account/login.php">Login</a>
+    </div>
+    <div class="profile-info-container">
+        <h2 class="profile-username">@<?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?></h2>
     </div>
 </header>
 <header class="headerblokjes">

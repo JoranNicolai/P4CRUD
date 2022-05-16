@@ -77,7 +77,7 @@ function registerAcc(){
 
 			$_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
 			$_SESSION['success']  = "You are now logged in";
-			header('location: home/home.php');
+			header('location: ../index.php');
 		}
 	}
 }
@@ -88,7 +88,7 @@ function registerAcc(){
 // ...
 function isAdmin()
 {
-	if (isset($_SESSION['user']) && $_SESSION['user']['username'] == 'test' ) {
+	if (isset($_SESSION['user']) && $_SESSION['user']['username'] == 'admin' ) {
 		return true;
 	}else{
 		return false;
@@ -98,7 +98,7 @@ function isAdmin()
 // return user array from their id
 function getUserById($id){
 	global $db;
-	$query = "SELECT * FROM users WHERE Accountid=" . $id;
+	$query = "SELECT * FROM users WHERE id=" . $id;
 	$result = mysqli_query($db, $query);
 
 	$user = mysqli_fetch_assoc($result);
