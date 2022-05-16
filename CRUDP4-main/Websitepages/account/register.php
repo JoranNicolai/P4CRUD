@@ -21,7 +21,7 @@
         <div class="container">
           <div class="left">
             <div class="login">Register</div>
-            <div class="eula">If you already have an account, please login with that one. <a class="login_btn1"href="./">Log in</a>.</div>
+            <div class="eula">If you already have an account, please login with that one. <a class="login_btn1"href="./login.php">Log in</a>.</div>
           </div>
           <div class="right">
             <svg viewBox="0 0 320 300">
