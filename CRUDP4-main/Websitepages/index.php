@@ -1,3 +1,11 @@
+<?php 
+	include('../php/functions.php');
+	// if (!isAdmin()) {
+	// 	$_SESSION['msg'] = "You must log in first";
+	// 	header('location: login.php');
+	// }
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,6 +24,7 @@
         <a href="index.php">Home</a>
         <a href="vluchten.php">Vluchten</a>
         <a href="overons.php">Over ons</a>
+
         <a href="contact.php">Contact</a>
         <a href="">Login</a>
     </div>
