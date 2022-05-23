@@ -40,20 +40,12 @@
                 echo "<a href=\"./account/login.php\">Admin</a>";
             }
         ?>
-        <a href="overons.php">Over ons</a>
-        <a href="">Contact</ a>
-        <a href="./account/login.php">Login</a>
     </div>
 </header>
 <header>
 <div class="profile-info-container">
     <h2 class="profile-username">Welcome <?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?>!</h2>
 </div>
-
-        <a href="overons.php">Over ons</a>
-        <a href="">Contact</ a>
-        <a href="./account/login.php">Login</a>
-    </div>
 
 </header>
 
@@ -67,9 +59,6 @@
         </div>
     </div>
 </header>
-<div class="profile-info-container">
-    <h2 class="profile-username">u bent in gelogt als:<?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?></h2>
-</div>
 <footer>
     <div class="blok3">
         <a href="index.php"><h3>Vliegtickets</h3></a>
