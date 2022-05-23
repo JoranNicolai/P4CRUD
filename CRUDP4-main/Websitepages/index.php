@@ -46,7 +46,6 @@
 <div class="profile-info-container">
     <h2 class="profile-username">Welcome <?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?>!</h2>
 </div>
-
 </header>
 
 <header class="headerblokjes">
