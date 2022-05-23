@@ -97,8 +97,6 @@ body {
   color: #F1F1F2;
   position: relative;
   width: 50%;
-  margin-top: -50px;
-  height: 135%;
 }
 @media (max-width: 767px) {
   .right {
