@@ -13,7 +13,7 @@ body {
     background: #7b4397;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-image: url('../../Images/account-bg.jpg'); 
+    background-image: url('../../Images/background.jpeg');
     background-size: cover;   
     background-repeat: no-repeat;
 }
@@ -55,7 +55,7 @@ body {
   height: 320px;
   margin: 0 auto;
   width: 640px;
-  opacity: 0.8;
+
 }
 @media (max-width: 767px) {
   .container {
