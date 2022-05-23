@@ -289,3 +289,16 @@ display: flex;
 .container999{
    height: 100%;
 }
+
+.container222 {
+    width: 50%;
+    background-color: whitesmoke;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    opacity: .8;
+}
+
+.displayflex{
+    display: flex;
+    justify-content: center;
+}

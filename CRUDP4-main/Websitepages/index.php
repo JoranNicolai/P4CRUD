@@ -51,7 +51,7 @@
 </div>
 
         <a href="overons.php">Over ons</a>
-        <a href="">Contact</ a>
+        <a href="contact.php">Contact</ a>
         <a href="./account/login.php">Login</a>
     </div>
 
