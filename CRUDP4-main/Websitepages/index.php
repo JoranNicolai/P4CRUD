@@ -25,16 +25,28 @@
         <a href="vluchten.php">Vluchten</a>
         <a href="">Over ons</a>
         <a href="">Contact</a>
-        <a href="./account/login.php">Login</a>
+        <?php
+        if (!isLoggedIn()) {
+                echo "<a href='./account/login.php'>Login</a>";
+            }
+        ?>
+        <?php
+        if (isLoggedIn()) {
+                echo "<a href='logout.php'>Logout</a>";
+            }
+        ?>
         <?php
         if (isAdmin()) {
                 echo "<a href=\"./account/login.php\">Admin</a>";
             }
         ?>
     </div>
-    <div class="profile-info-container">
-        <h2 class="profile-username">@<?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?></h2>
-    </div>
+    
+</header>
+<header>
+<div class="profile-info-container">
+    <h2 class="profile-username">Welcome <?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?>!</h2>
+</div>
 </header>
 <header class="headerblokjes">
     <div class="wrap">
