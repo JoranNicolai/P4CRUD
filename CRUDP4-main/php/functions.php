@@ -6,11 +6,11 @@ $db = mysqli_connect('localhost', 'root', '', 'crudp4');
 
 
 // variable declaration
-$username = "";
-$email    = "";
-$password = "";
+$username  = "";
+$email     = "";
+$password  = "";
 $password1 = "";
-$errors   = array(); 
+$errors    = array(); 
 
 // for users
 if (isset($_POST['register'])) {
@@ -138,9 +138,6 @@ if (isset($_GET['logout'])) {
 	unset($_SESSION['user']);
 	header("location: ./login.php");
 }// call the login() function if register_btn is clicked
-if (isset($_POST['login_btn'])) {
-	login();
-}
 
 // LOGIN USER
 function login(){
@@ -172,7 +169,7 @@ function login(){
 				$_SESSION['success']  = "You are now logged in";
 
 				header('location: ../index.php');
-		}else {
+		} else {
 			array_push($errors, "Wrong username/password combination");
 		}
 	}
