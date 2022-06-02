@@ -44,7 +44,16 @@
 </header>
 <header>
 <div class="profile-info-container">
-    <h2 class="profile-username">Welcome <?php  if (isset($_SESSION['user'])) : ?><?php echo $_SESSION['user']['username']; ?><?php endif ?>!</h2>
+<?php
+        if (isLoggedIn()) {
+                echo "<h2 class='profile-username'>Welcome" + $_SESSION['user']['username'] + "!</h2>"; 
+            }
+            if (!isLoggedIn()) {
+                echo "<h2 class='profile-username'>Welcome to corendon!</h2>"; 
+            }
+        ?>
+        
+    
 </div>
 </header>
 
