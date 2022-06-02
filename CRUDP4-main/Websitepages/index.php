@@ -45,8 +45,8 @@
 <header>
 <div class="profile-info-container">
 <?php
-    $userName = $_SESSION['user']['username'];
         if (isLoggedIn()) {
+            $userName = $_SESSION['user']['username'];
                 echo "<h2 class='profile-username'>Welcome $userName!</h2>"; 
             }
             if (!isLoggedIn()) {
