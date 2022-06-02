@@ -37,7 +37,7 @@
         ?>
         <?php
         if (isAdmin()) {
-                echo "<a href=\"./account/login.php\">Admin</a>";
+                echo "<a href=\"../admin/admin.php\">Admin</a>";
             }
         ?>
     </div>
