@@ -33,7 +33,7 @@
         <?php
         if (isLoggedIn()) {
                 echo "<a href='logout.php'>Logout</a>";
-            }
+            }   
         ?>
         <?php
         if (isAdmin()) {
@@ -45,8 +45,9 @@
 <header>
 <div class="profile-info-container">
 <?php
+    $userName = $_SESSION['user']['username'];
         if (isLoggedIn()) {
-                echo "<h2 class='profile-username'>Welcome" + $_SESSION['user']['username'] + "!</h2>"; 
+                echo "<h2 class='profile-username'>Welcome $userName!</h2>"; 
             }
             if (!isLoggedIn()) {
                 echo "<h2 class='profile-username'>Welcome to corendon!</h2>"; 
