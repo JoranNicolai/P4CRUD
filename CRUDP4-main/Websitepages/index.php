@@ -19,16 +19,15 @@
 
 <body>
 
+
     <header class="header">
         <img class="img" src="../Images/logocrud.png" width="200px">
         <div class="headersearch">
             <a href="index.php">Home</a>
             <a href="vluchten.php">Vluchten</a>
-<<<<<<< Updated upstream
-            <a href="">Over ons</a>
-=======
+
             <a href="overons.php">Over ons</a>
->>>>>>> Stashed changes
+
             <a href="contact.php">Contact</a>
             <?php
         if (!isLoggedIn()) {
@@ -42,7 +41,7 @@
         ?>
                     <?php
         if (isAdmin()) {
-                echo "<a href=\"./account/login.php\">Admin</a>";
+                echo "<a href=\"../admin/admin.php\">Admin</a>";
             }
         ?>
         </div>

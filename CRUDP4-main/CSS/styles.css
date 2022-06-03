@@ -267,6 +267,7 @@ h3 {
     display: flex;
 }
 
+
 .col-md-4 {
     width: 200px;
 }
@@ -286,4 +287,8 @@ h3 {
 .displayflex {
     display: flex;
     justify-content: center;
+}
+
+.absulute {
+    position: absolute;
 }
