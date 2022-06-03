@@ -24,7 +24,11 @@
         <div class="headersearch">
             <a href="index.php">Home</a>
             <a href="vluchten.php">Vluchten</a>
+<<<<<<< Updated upstream
             <a href="">Over ons</a>
+=======
+            <a href="overons.php">Over ons</a>
+>>>>>>> Stashed changes
             <a href="contact.php">Contact</a>
             <?php
         if (!isLoggedIn()) {
