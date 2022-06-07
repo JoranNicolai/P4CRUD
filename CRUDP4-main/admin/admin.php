@@ -21,6 +21,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,6 +36,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Admin Panel</title>
 </head>
+
 <body>
     <div class="header">
         <?php 
@@ -123,5 +125,4 @@
     document.getElementById(cityName).style.display = "block";
   }
 </script>
-
 </html>
