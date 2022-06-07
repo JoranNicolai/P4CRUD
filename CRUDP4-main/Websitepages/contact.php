@@ -70,21 +70,24 @@
 
 <div class="displayflex">
 <div class="container222">
+    
 <div class="container">
-    <form action="/action_page.php">
-        <label for="fname">Naam</label>
-        <input type="text" id="fname" name="firstname" placeholder="Jouw naam..."
 
+    <form action="/action_page.php">
+    <h1>Contact</h1>
+        <label for="fname">Naam</label>
+        <input type="text" id="fname" name="firstname" placeholder="Jouw naam...">
         <label for="lname">E-mail</label>
         <input type="text" id="lname" name="lastname" placeholder="Jouw E-mail...">
-        <label for="subject">Subject</label>
+        <label class="subject" for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Wat wilt u sturen?..." style="height:200px"></textarea>
 
-        <input type="submit" value="Submit">
+        <input class="sumbit1" type="submit" value="Submit">
     </form>
 </div>
 </div>
 </div>
+<div class="blok30"></div>      
 </body>
 </html>
 </body>
