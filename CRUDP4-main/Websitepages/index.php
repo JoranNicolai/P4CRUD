@@ -8,45 +8,71 @@
 
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
+<<<<<<< Updated upstream
+
 <body>
 
-<header class="header">
-    <img class="img" src="../Images/logocrud.png" width="200px">
-    <div class="headersearch">
-        <a href="index.php">Home</a>
-        <a href="vluchten.php">Vluchten</a>
-        <a href="">Over ons</a>
 
-        <a href="contact.php">Contact</a>
+    <header class="header">
+        <img class="img" src="../Images/logocrud.png" width="200px">
+        <div class="headersearch">
+            <a href="index.php">Home</a>
+            <a href="vluchten.php">Vluchten</a>
 
-        <?php
+            <a href="overons.php">Over ons</a>
+
+=======
+
+<body>
+
+    <header class="header">
+        <img class="img" src="../Images/logocrud.png" width="200px">
+        <div class="headersearch">
+            <a href="index.php">Home</a>
+            <a href="vluchten.php">Vluchten</a>
+            <a href="">Over ons</a>
+>>>>>>> Stashed changes
+            <a href="contact.php">Contact</a>
+            <?php
         if (!isLoggedIn()) {
                 echo "<a href='./account/login.php'>Login</a>";
             }
         ?>
-        <?php
+                <?php
+<<<<<<< Updated upstream
+=======
+        if (isAdmin()) {
+            echo "<a href='../admin/admin.php'>Admin</a>";
+            }
+        ?>
+                    <?php
+>>>>>>> Stashed changes
         if (isLoggedIn()) {
                 echo "<a href='logout.php'>Logout</a>";
             }   
         ?>
-        <?php
+<<<<<<< Updated upstream
+                    <?php
         if (isAdmin()) {
                 echo "<a href=\"../admin/admin.php\">Admin</a>";
             }
         ?>
-    </div>
-</header>
-<header>
-<div class="profile-info-container">
-<?php
+=======
+
+>>>>>>> Stashed changes
+        </div>
+    </header>
+    <header>
+        <div class="profile-info-container">
+            <?php
         if (isLoggedIn()) {
             $userName = $_SESSION['user']['username'];
                 echo "<h2 class='profile-username'>Welcome $userName!</h2>"; 
@@ -55,58 +81,77 @@
                 echo "<h2 class='profile-username'>Welcome to corendon!</h2>"; 
             }
         ?>
-        
-    
-</div>
-</header>
 
-<header class="headerblokjes">
-    <div class="wrap">
-        <div class="search">
-            <input type="search" class="searchTerm" placeholder="Search...">
 
-            <i class="fa fa-search"></i>
-            </button>
         </div>
-    </div>
-</header>
-<footer>
-    <div class="blok3">
-        <a href="index.php"><h3>Vliegtickets</h3></a>
-    </div>
-    <div class="blok4">
-        <a href="tickettabel/bundels.php"><h3>Vlucht en hotel</h3></a>
-    </div>
-    <div class="blok5">
-        <a href="tickettabel/hotels.php"><h3>Hotels</h3></a>
-    </div>
-    <div class="blok6">
-        <a href="tickettabel/taxi.php"><h3>Taxi's</h3></a>
-    </div>
-    <div class="blok7">
-        <a href="tickettabel/verhuur.php"><h3>Auto verhuur</h3></a>
-    </div>
-    <div class="blok2">
-        <form class="formpje" action="">
-            <input class="formpje" type="text" placeholder="Waar begint uw vlucht?">
-        </form>
-        <form class="formpje" action="">
-            <input class="formpje" type="text" placeholder="Waar gaat uw vlucht heen?">
-        </form>
-        <form class="formpje1" action="">
-            <input class="formpje10" type="date" placeholder="Heen">
-        </form>
-        <form class="formpje1" action="">
-            <input class="formpje10" type="date" placeholder="Heen">
-        </form>
-        <form class="formpje4" action="">
-            <input class="formpje" type="number" placeholder="Aantal personen">
-        </form>
-        <a href="#"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
-    </div>
+    </header>
 
-    <div class="blok1">
+    <header class="headerblokjes">
+        <div class="wrap">
+            <div class="search">
+                <input type="search" class="searchTerm" placeholder="Search...">
 
-    </div>
+                <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <footer>
+<<<<<<< Updated upstream
+=======
+        <div class="midden">
+>>>>>>> Stashed changes
+        <div class="blok3">
+            <a href="index.php">
+                <h3>Vliegtickets</h3>
+            </a>
+        </div>
+        <div class="blok4">
+            <a href="tickettabel/bundels.php">
+                <h3>Vlucht en hotel</h3>
+            </a>
+        </div>
+        <div class="blok5">
+            <a href="tickettabel/hotels.php">
+                <h3>Hotels</h3>
+            </a>
+        </div>
+        <div class="blok6">
+            <a href="tickettabel/taxi.php">
+                <h3>Taxi's</h3>
+            </a>
+        </div>
+        <div class="blok7">
+            <a href="tickettabel/verhuur.php">
+                <h3>Auto verhuur</h3>
+            </a>
+        </div>
+        <div class="blok2">
+            <form class="formpje" action="">
+                <input class="formpje" type="text" placeholder="Waar begint uw vlucht?">
+            </form>
+            <form class="formpje" action="">
+                <input class="formpje" type="text" placeholder="Waar gaat uw vlucht heen?">
+            </form>
+            <form class="formpje1" action="">
+                <input class="formpje10" type="date" placeholder="Heen">
+            </form>
+            <form class="formpje1" action="">
+                <input class="formpje10" type="date" placeholder="Heen">
+            </form>
+            <form class="formpje4" action="">
+                <input class="formpje" type="number" placeholder="Aantal personen">
+            </form>
+            <a href="#"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
+        </div>
+<<<<<<< Updated upstream
+
+=======
+        </div>
+>>>>>>> Stashed changes
+        <div class="blok1">
+
+        </div>
 </body>
+
 </html>
