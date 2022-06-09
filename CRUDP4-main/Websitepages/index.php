@@ -47,11 +47,7 @@
             }   
         ?>
 
-                    <?php
-        if (isAdmin()) {
-                echo "<a href=\"../admin/admin.php\">Admin</a>";
-            }
-        ?>
+        
 
 
         </div>
