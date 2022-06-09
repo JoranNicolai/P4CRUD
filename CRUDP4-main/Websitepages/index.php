@@ -17,38 +17,31 @@
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 
-
-
 <body>
-
     <header class="header">
         <img class="img" src="../Images/logocrud.png" width="200px">
         <div class="headersearch">
             <a href="index.php">Home</a>
             <a href="vluchten.php">Vluchten</a>
-            <a href="">Over ons</a>
+            <a href="overons.php">Over ons</a>
+
             <a href="contact.php">Contact</a>
             <?php
         if (!isLoggedIn()) {
                 echo "<a href='./account/login.php'>Login</a>";
             }
         ?>
-                <?php
-
-
+        
+        <?php
         if (isAdmin()) {
             echo "<a href='../admin/admin.php'>Admin</a>";
             }
         ?>
-                    <?php
-
+        <?php
         if (isLoggedIn()) {
                 echo "<a href='logout.php'>Logout</a>";
             }   
         ?>
-
-        
-
 
         </div>
     </header>
@@ -81,7 +74,6 @@
     <footer>
 
         <div class="midden">
-
         <div class="blok3">
             <a href="index.php">
                 <h3>Vliegtickets</h3>
@@ -126,10 +118,10 @@
             <a href="#"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
             
         </div>
+        <div class="blok1">
 
 
         </div>
-
       <div class="blok10">
         <div class="blok1">
         <a href="klikhier.php"><h5>Privacy policy en Algemene voorwaarden.</h5></a>

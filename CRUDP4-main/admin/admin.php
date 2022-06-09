@@ -46,6 +46,7 @@
         <a onclick="return openCity('Accounts')" class="admin-button">Manage Accounts</a>
         <a onclick="return openCity('Flights')" class="admin-button">Manage Flights</a>
         <a onclick="return openCity('Places')" class="admin-button">Manage Places</a>
+        <a href="../Websitepages/index.php" class="admin-button">Back</a>
     </div>
 
     <div id="Main" class="admin-keuzes main-keuze">
