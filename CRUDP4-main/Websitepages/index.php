@@ -16,58 +16,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="../CSS/styles.css">
 </head>
-<<<<<<< Updated upstream
 
 <body>
-
-
     <header class="header">
         <img class="img" src="../Images/logocrud.png" width="200px">
         <div class="headersearch">
             <a href="index.php">Home</a>
             <a href="vluchten.php">Vluchten</a>
-
             <a href="overons.php">Over ons</a>
-
-=======
-
-<body>
-
-    <header class="header">
-        <img class="img" src="../Images/logocrud.png" width="200px">
-        <div class="headersearch">
-            <a href="index.php">Home</a>
-            <a href="vluchten.php">Vluchten</a>
-            <a href="">Over ons</a>
->>>>>>> Stashed changes
             <a href="contact.php">Contact</a>
             <?php
         if (!isLoggedIn()) {
                 echo "<a href='./account/login.php'>Login</a>";
             }
         ?>
-                <?php
-<<<<<<< Updated upstream
-=======
+        
+        <?php
         if (isAdmin()) {
             echo "<a href='../admin/admin.php'>Admin</a>";
             }
         ?>
-                    <?php
->>>>>>> Stashed changes
+        <?php
         if (isLoggedIn()) {
                 echo "<a href='logout.php'>Logout</a>";
             }   
         ?>
-<<<<<<< Updated upstream
-                    <?php
-        if (isAdmin()) {
-                echo "<a href=\"../admin/admin.php\">Admin</a>";
-            }
-        ?>
-=======
 
->>>>>>> Stashed changes
         </div>
     </header>
     <header>
@@ -97,10 +71,8 @@
         </div>
     </header>
     <footer>
-<<<<<<< Updated upstream
-=======
+
         <div class="midden">
->>>>>>> Stashed changes
         <div class="blok3">
             <a href="index.php">
                 <h3>Vliegtickets</h3>
@@ -144,11 +116,6 @@
             </form>
             <a href="#"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
         </div>
-<<<<<<< Updated upstream
-
-=======
-        </div>
->>>>>>> Stashed changes
         <div class="blok1">
 
         </div>
