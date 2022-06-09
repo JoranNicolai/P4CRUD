@@ -24,6 +24,7 @@
             <a href="index.php">Home</a>
             <a href="vluchten.php">Vluchten</a>
             <a href="overons.php">Over ons</a>
+
             <a href="contact.php">Contact</a>
             <?php
         if (!isLoggedIn()) {
@@ -115,10 +116,18 @@
                 <input class="formpje" type="number" placeholder="Aantal personen">
             </form>
             <a href="#"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
+            
         </div>
         <div class="blok1">
 
+
         </div>
+      <div class="blok10">
+        <div class="blok1">
+        <a href="klikhier.php"><h5>Privacy policy en Algemene voorwaarden.</h5></a>
+        </div>
+        </div>
+       
 </body>
 
 </html>
