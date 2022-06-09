@@ -73,7 +73,7 @@
     
 <div class="container">
 
-    <form action="/action_page.php">
+<form action="https://formsubmit.co/jorannicolai@gmail.com" method="post">
     <h1>Contact</h1>
         <label for="fname">Naam</label>
         <input type="text" id="fname" name="firstname" placeholder="Jouw naam...">
