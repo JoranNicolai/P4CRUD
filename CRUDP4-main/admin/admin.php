@@ -82,7 +82,7 @@
                                         <td><?php echo $UserPassword ?></td>
                                         <td><?php
                                             echo '<a href="update.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            echo '<a href="delete.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<a href="areyousure.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                             ?></td>
                                     </tr>        
                             <?php 
@@ -98,60 +98,11 @@
     </div>
 
     <div id="Flights" class="admin-keuzes" style="display: none">
-      Flights
+        Flights
     </div>
 
     <div id="Places" class="admin-keuzes" style="display: none">
-            Places
-
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
-</head>
-
-<body>
-
-    <header class="header">
-        <img class="img" src="../Images/logocrud.png" width="200px">
-        <div class="headersearch">
-            <a href="../Websitepages/index.php">Index</a>
-            <a href="">Boekingen</a>
-            <a href="">Reviews</a>
-            <a href="">Berichten</a>
-            <?php
-        if (!isLoggedIn()) {
-                echo "<a href='./account/login.php'>Login</a>";
-            }
-        ?>
-              <?php
-        if (isLoggedIn()) {
-                echo "<a href='../Websitepages/logout.php'>Logout</a>";
-            }   
-        ?>
-
-        </div>
-    </header>
-    <header>
-        <div class="profile-info-container">
-            <?php
-        if (isLoggedIn()) {
-            $userName = $_SESSION['user']['username'];
-                echo "<h2 class='profile-username'>Welcome $userName!</h2>"; 
-            }
-            if (!isLoggedIn()) {
-                echo "<h2 class='profile-username'>Welcome to corendon!</h2>"; 
-            }
-        ?>
-
-
-        </div>
-    </header>
-
-
-
-    <div class="blok1">
-
+        Places
     </div>
 </body>
 
