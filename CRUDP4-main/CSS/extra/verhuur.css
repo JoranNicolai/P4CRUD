@@ -23,6 +23,13 @@ header {
     opacity: .8;
 }
 
+.profile-username {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    display: flex;
+    font-family: "Nunito", sans-serif;
+}
+
 .headerblokjes {
     width: 100%;
     background-color: whitesmoke;
@@ -80,7 +87,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #d03737;
-    margin-left: 260px;
+    margin-left: 350px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -99,7 +106,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #d03737;
-    margin-left: 460px;
+    margin-left: 550px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -118,7 +125,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #d03737;
-    margin-left: 660px;
+    margin-left: 750px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -137,7 +144,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #d03737;
-    margin-left: 860px;
+    margin-left: 950px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -156,7 +163,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #c45b30;
-    margin-left: 1060px;
+    margin-left: 1150px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -175,7 +182,7 @@ header {
     background-color: #c45b30;
     position: absolute;
     bottom: 0;
-    margin-left: 260px;
+    margin-left: 350px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-left: solid 1px black;
@@ -188,9 +195,17 @@ header {
 }
 
 .container {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    color: darkblue;
+}
+
+.sumbit1 {
+    background-color: darkblue;
 }
 
 .formpje {
@@ -232,4 +247,63 @@ header {
 
 h3 {
     color: whitesmoke;
+}
+
+.blok22 {
+    width: 75%;
+    height: 350px;
+    background-color: whitesmoke;
+    opacity: .8;
+    display: flex;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.containerblok22 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corendon {
+    margin: 20px;
+    display: flex;
+}
+
+.overons {
+    margin-left: 250px;
+    display: flex;
+}
+
+.col-md-4 {
+    width: 200px;
+}
+
+.container999 {
+    height: 100%;
+}
+
+.container222 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(206, 206, 206, 0.736);
+}
+
+.displayflex {
+    display: flex;
+    justify-content: center;
+}
+
+.absulute {
+    position: absolute;
+}
+
+.blok30 {
+    width: 100%;
+    height: 200px;
+    background-color: rgba(206, 206, 206, 0.736);
+}
+
+h1 {
+    margin-bottom: 50px;
 }

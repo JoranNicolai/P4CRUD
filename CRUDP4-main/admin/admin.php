@@ -1,16 +1,9 @@
 <?php 
 	include('../php/functions.php');
-	if (!isLoggedIn()) {
-		$_SESSION['msg'] = "You must log in first as admin";
-		header('location: ../Websitepages/account/login.php');
-	} else {
-        if (!isAdmin()) {
-            $_SESSION['msg'] = "You must log in first as admin";
-            header('location: ../Websitepages/index.php');
-        }
-    }
-    
-    
+	// if (!isAdmin()) {
+	// 	$_SESSION['msg'] = "You must log in first";
+	// 	header('location: login.php');
+	// }
 ?>
 
 <?php 
