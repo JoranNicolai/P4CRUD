@@ -33,9 +33,10 @@
 <div class="containerblok22">
 <div class="blok22">
     <img class="corendon" src="../Images/overons.jpg" width="400px" height="300px">
-
-    <h1 class="overons">Over ons!</h1>
-
+    <div class="iets">
+        <h1 class="overons">Over ons!</h1>
+        <p class="ja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatibus officia expedita voluptatum velit repellat excepturi nam aperiam? Ratione doloremque enim fugiat optio aliquid pariatur, quidem quod ad. Maxime, enim.</p>
+    </div>
 </div>
 
 </div>
