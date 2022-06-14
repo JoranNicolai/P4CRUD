@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(../../Images/background2.jpeg);
+    background-image: url(../Images/background2.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -79,15 +79,23 @@ header {
     opacity: .9;
     position: absolute;
     z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
+.midden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blok3 {
     width: 200px;
-    height: 40px;
+    height: 50px;
     position: absolute;
     bottom: 200px;
-    background-color: #d03737;
-    margin-left: 260px;
+    background-color: #c45b30;
+    margin-left: -57.9%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -102,11 +110,11 @@ header {
 
 .blok4 {
     width: 200px;
-    height: 50px;
+    height: 40px;
     position: absolute;
     bottom: 200px;
-    background-color: #c45b30;
-    margin-left: 460px;
+    background-color: #d03737;
+    margin-left: -28.9%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -125,7 +133,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #d03737;
-    margin-left: 660px;
+    margin-left: 0.1%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -144,7 +152,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #d03737;
-    margin-left: 860px;
+    margin-left: 29.1%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -163,7 +171,7 @@ header {
     position: absolute;
     bottom: 200px;
     background-color: #d03737;
-    margin-left: 1060px;
+    margin-left: 57.9%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-left: solid 1px black;
@@ -182,7 +190,6 @@ header {
     background-color: #c45b30;
     position: absolute;
     bottom: 0;
-    margin-left: 260px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border-left: solid 1px black;
@@ -306,4 +313,16 @@ h3 {
 
 h1 {
     margin-bottom: 50px;
+}
+
+.blok10 {
+    margin-top: 390px;
+    height: 500px;
+    width: 100%;
+    background-color: whitesmoke;
+    opacity: .9;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
 }
