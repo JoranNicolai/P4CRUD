@@ -1,3 +1,10 @@
+<?php 
+	include('../php/functions.php');
+	if (!isAdmin()) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
+?>
 <?php
 include_once '../php/functions.php';
 $sql = "DELETE FROM users WHERE id='" . $_GET["id"] . "'";
