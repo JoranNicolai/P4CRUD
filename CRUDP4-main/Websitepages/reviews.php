@@ -70,53 +70,7 @@
         </div>
     </header>
     <footer>
-        <div class="midden">
-                <div class="blok3">
-                    <a href="index.php">
-                        <h3>Vliegtickets</h3>
-                    </a>
-                </div>
-                <div class="blok4">
-                    <a href="tickettabel/bundels.php">
-                        <h3>Vlucht en hotel</h3>
-                    </a>
-                </div>
-                <div class="blok5">
-                    <a href="tickettabel/hotels.php">
-                        <h3>Hotels</h3>
-                    </a>
-                </div>
-                <div class="blok6">
-                    <a href="tickettabel/taxi.php">
-                        <h3>Taxi's</h3>
-                    </a>
-                </div>
-                <div class="blok7">
-                    <a href="tickettabel/verhuur.php">
-                        <h3>Auto verhuur</h3>
-                    </a>
-                </div>
-               
-            
-            <div class="blok2">
-                <form class="formpje" action="">
-                    <input class="formpje" type="text" placeholder="Waar begint uw vlucht?">
-                </form>
-                <form class="formpje" action="">
-                    <input class="formpje" type="text" placeholder="Waar gaat uw vlucht heen?">
-                </form>
-                <form class="formpje1" action="">
-                    <input class="formpje10" type="date" placeholder="Heen">
-                </form>
-                <form class="formpje1" action="">
-                    <input class="formpje10" type="date" placeholder="Heen">
-                </form>
-                <form class="formpje4" action="">
-                    <input class="formpje" type="number" placeholder="Aantal personen">
-                </form>
-                <a href="#"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
-            </div>
-        </div>
+
         <div class="blok1">
 
 

@@ -98,8 +98,21 @@
         </div>
     </div>
 
+    
+
     <div id="Flights" class="admin-keuzes" style="display: none">
-        Flights
+    <div class="flextaa">
+    <form method="POST" action="../includes/menucdu.php">
+        <h1>Add hier je product</h1>
+        <label>Naam product :</label>
+        <input type="text" name="name" required>
+        <label>Image :</label>
+        <input type="file" name="image" required>
+        <label>Price :</label>
+        <input type="int" name="price" required>
+        <input type="submit" name="submit" value="Add">
+        <img src="../images/logo.png" width= 440px>
+    </form>
     </div>
 
     <div id="Places" class="admin-keuzes" style="display: none">

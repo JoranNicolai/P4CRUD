@@ -53,6 +53,12 @@ header {
     margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    .img {
+        display: none;
+    }
+}
+
 .searchTerm {
     width: 300px;
     height: 30px;
@@ -108,6 +114,12 @@ header {
     box-shadow: 3px 2px 1px black;
 }
 
+@media only screen and (max-width: 600px) {
+    .blok3 {
+        display: none;
+    }
+}
+
 .blok4 {
     width: 200px;
     height: 40px;
@@ -127,6 +139,12 @@ header {
     box-shadow: 3px 0px 5px black;
 }
 
+@media only screen and (max-width: 600px) {
+    .blok4 {
+        display: none;
+    }
+}
+
 .blok5 {
     width: 200px;
     height: 40px;
@@ -143,6 +161,12 @@ header {
     align-items: center;
     color: whitesmoke;
     box-shadow: 3px 0px 5px black;
+}
+
+@media only screen and (max-width: 600px) {
+    .blok5 {
+        display: none;
+    }
 }
 
 .blok6 {
@@ -164,6 +188,12 @@ header {
     box-shadow: 3px 0px 5px black;
 }
 
+@media only screen and (max-width: 600px) {
+    .blok6 {
+        display: none;
+    }
+}
+
 .blok7 {
     width: 200px;
     height: 40px;
@@ -183,6 +213,12 @@ header {
     box-shadow: 3px 0px 5px black;
 }
 
+@media only screen and (max-width: 600px) {
+    .blok7 {
+        display: none;
+    }
+}
+
 .blok2 {
     width: 1000px;
     height: 200px;
@@ -198,6 +234,14 @@ header {
     display: flex;
     flex-wrap: wrap;
     ;
+}
+
+@media only screen and (max-width: 600px) {
+    .blok2 {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
 }
 
 .container {
@@ -688,6 +732,12 @@ header {
     box-shadow: 3px 0px 5px black;
 }
 
+@media only screen and (max-width: 600px) {
+    .formpje10 {
+        display: none;
+    }
+}
+
 .sumbit {
     width: 100px;
     height: 50px;
@@ -769,4 +819,24 @@ h1 {
     z-index: -1;
     display: flex;
     justify-content: center;
+}
+
+.col-md-4 {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.midden1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.submitbutton1 {
+    background-color: whitesmoke;
+    border-radius: 5px;
 }
