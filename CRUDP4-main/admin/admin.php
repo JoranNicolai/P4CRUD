@@ -2,7 +2,7 @@
 	include('../php/functions.php');
 	if (!isAdmin()) {
 		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
+		header('location: ../Websitepages/account/login.php');
 	}
 ?>
 
@@ -13,6 +13,10 @@
 <?php 
     $query = "select * from flights";
     $result_flights = mysqli_query($db,$query);
+?>
+<?php 
+$query = "SELECT * FROM `reviews` WHERE checked='no';";
+$result_reviews = mysqli_query($db,$query);
 ?>
 
 
@@ -31,6 +35,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/919a9152fa.js" crossorigin="anonymous"></script>
     <title>Admin Panel</title>
 </head>
 
@@ -48,7 +53,8 @@
         </div>
     <div class="keuzes">
         <a onclick="return openCity('Accounts')" class="admin-button">Manage Accounts</a>
-        <a onclick="return openCity('Flights')" class="admin-button">Manage Flights</a>
+        <a onclick="return openCity('Flights')" class="admin-button">Manage Locations</a>
+        <a onclick="return openCity('Reviews')" class="admin-button">Manage Reviews</a>
         <a href="../Websitepages/index.php" class="admin-button">Back</a>
     </div>
 
@@ -166,8 +172,64 @@
         </div>
     </div>
 
-    <div id="Places" class="admin-keuzes" style="display: none">
-        Places
+    <div id="Reviews" class="admin-keuzes" style="display: none">
+    <div class="container">
+            <div class="row">
+                <div class="col m-auto">
+                    <div class="card mt-5">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td>Review ID</td>
+                                <td>User Name</td>
+                                <td>Review Content</td>
+                                <td>Review Ratings (1/5)</td>
+                                <td>Review Date</td>
+                                <td>Action</td>
+                            </tr>
+    
+                            <?php 
+                                        
+                                        while($row=mysqli_fetch_assoc($result_reviews))
+                                        {
+                                            $UserID = $row['id'];
+                                            $UserName = $row['name'];
+                                            $UserEmail = $row['content'];
+                                            $UserPassword = $row['rating'];
+                                            $UserDate = $row['submit_date'];
+                                ?>
+                            <tr>
+                                <td>
+                                    <?php echo $UserID ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserName ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserEmail ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserPassword ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserDate ?>
+                                </td>
+                                <td>
+                                    <?php
+                                                echo '<a href="accept_review.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa-solid fa-check"></span></a>';
+                                                echo '<a href="delete_review.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                                ?>
+                                </td>
+                            </tr>
+                            <?php 
+                                        }  
+                                ?>
+    
+    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
