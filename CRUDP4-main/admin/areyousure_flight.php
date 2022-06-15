@@ -16,7 +16,7 @@
 <body>
     <?php 
     $UserID = $_GET["id"];
-    echo '<a href="delete.php?id='. $UserID .'">yes</a>';
+    echo '<a href="delete_flight.php?id='. $UserID .'">yes</a>';
     echo '<a href="admin.php">no</a>';
     ?>
     

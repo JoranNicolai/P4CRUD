@@ -1,14 +1,18 @@
 <?php 
 	include('../php/functions.php');
-	// if (!isAdmin()) {
-	// 	$_SESSION['msg'] = "You must log in first";
-	// 	header('location: login.php');
-	// }
+	if (!isAdmin()) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
 ?>
 
 <?php 
-    $query = " select * from users";
+    $query = "select * from users";
     $result = mysqli_query($db,$query);
+?>
+<?php 
+    $query = "select * from flights";
+    $result_flights = mysqli_query($db,$query);
 ?>
 
 
@@ -45,7 +49,6 @@
     <div class="keuzes">
         <a onclick="return openCity('Accounts')" class="admin-button">Manage Accounts</a>
         <a onclick="return openCity('Flights')" class="admin-button">Manage Flights</a>
-        <a onclick="return openCity('Places')" class="admin-button">Manage Places</a>
         <a href="../Websitepages/index.php" class="admin-button">Back</a>
     </div>
 
@@ -54,7 +57,7 @@
     </div>
 
     <div id="Accounts" class="admin-keuzes container" style="display: none;">
-    <div class="container">
+        <div class="container">
             <div class="row">
                 <div class="col m-auto">
                     <div class="card mt-5">
@@ -66,31 +69,41 @@
                                 <td>User Password (encrypted)</td>
                                 <td>Action</td>
                             </tr>
-
+    
                             <?php 
-                                    
-                                    while($row=mysqli_fetch_assoc($result))
-                                    {
-                                        $UserID = $row['id'];
-                                        $UserName = $row['username'];
-                                        $UserEmail = $row['email'];
-                                        $UserPassword = $row['password'];
-                            ?>
-                                    <tr>
-                                        <td><?php echo $UserID ?></td>
-                                        <td><?php echo $UserName ?></td>
-                                        <td><?php echo $UserEmail ?></td>
-                                        <td><?php echo $UserPassword ?></td>
-                                        <td><?php
-                                            echo '<a href="update.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            echo '<a href="areyousure.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                            ?></td>
-                                    </tr>        
+                                        
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            $UserID = $row['id'];
+                                            $UserName = $row['username'];
+                                            $UserEmail = $row['email'];
+                                            $UserPassword = $row['password'];
+                                ?>
+                            <tr>
+                                <td>
+                                    <?php echo $UserID ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserName ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserEmail ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserPassword ?>
+                                </td>
+                                <td>
+                                    <?php
+                                                echo '<a href="update.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                                                echo '<a href="areyousure.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                                ?>
+                                </td>
+                            </tr>
                             <?php 
-                                    }  
-                            ?>                                                                    
-                                   
-
+                                        }  
+                                ?>
+    
+    
                         </table>
                     </div>
                 </div>
@@ -101,6 +114,7 @@
     
 
     <div id="Flights" class="admin-keuzes" style="display: none">
+
     <div class="flextaa">
     <form method="POST" action="../includes/menucdu.php">
         <h1>Add hier je product</h1>
@@ -113,6 +127,8 @@
         <input type="submit" name="submit" value="Add">
         <img src="../images/logo.png" width= 440px>
     </form>
+
+
     </div>
 
     <div id="Places" class="admin-keuzes" style="display: none">

@@ -1,4 +1,3 @@
-
 <?php 
 	include('../php/functions.php');
 	if (!isAdmin()) {
@@ -48,7 +47,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Check input errors before inserting in database
     if(empty($name_err) && empty($address_err) && empty($salary_err)){
         // Prepare an update statement
-        $sql = "UPDATE users SET username=?, email=?, password=PASSWORD(?) WHERE id=?";
+        $sql = "UPDATE flights SET location=?, description=?, price=? WHERE id=?";
          
         if($stmt = mysqli_prepare($db, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -83,7 +82,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
         $id =  trim($_GET["id"]);
         
         // Prepare a select statement
-        $sql = "SELECT * FROM users WHERE id = ?";
+        $sql = "SELECT * FROM flights WHERE id = ?";
         if($stmt = mysqli_prepare($db, $sql)){
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "i", $param_id);
@@ -101,9 +100,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     
                     // Retrieve individual field value
-                    $name = $row["username"];
-                    $address = $row["email"];
-                    $salary = $row["password"];
+                    $name = $row["location"];
+                    $address = $row["description"];
+                    $salary = $row["price"];
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
                     header("location: error.php");
@@ -151,17 +150,17 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     <p>Please edit the input values and submit to update the user.</p>
                     <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
                         <div class="form-group">
-                            <label>Name</label>
+                            <label>Location</label>
                             <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                             <span class="invalid-feedback"><?php echo $name_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>Email</label>
+                            <label>Description</label>
                             <textarea name="address" class="form-control <?php echo (!empty($address_err)) ? 'is-invalid' : ''; ?>"><?php echo $address; ?></textarea>
                             <span class="invalid-feedback"><?php echo $address_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>Password</label>
+                            <label>Price</label>
                             <input type="text" name="salary" class="form-control <?php echo (!empty($salary_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $salary; ?>">
                             <span class="invalid-feedback"><?php echo $salary_err;?></span>
                         </div>
