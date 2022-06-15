@@ -117,59 +117,24 @@ $result_reviews = mysqli_query($db,$query);
         </div>
     </div>
 
+    
+
     <div id="Flights" class="admin-keuzes" style="display: none">
-    <div class="container">
-            <div class="row">
-                <div class="col m-auto">
-                    <div class="card mt-5">
-                        <table class="table table-bordered">
-                            <tr>
-                                <td>Flight ID</td>
-                                <td>Location</td>
-                                <td>Description</td>
-                                <td>Price</td>
-                                <td>Action</td>
-                            </tr>
-    
-                            <?php 
-                                        
-                                        while($row=mysqli_fetch_assoc($result_flights))
-                                        {
-                                            $UserID = $row['id'];
-                                            $UserName = $row['location'];
-                                            $UserEmail = $row['description'];
-                                            $UserPassword = $row['price'];
-                                ?>
-                            <tr>
-                                <td>
-                                    <?php echo $UserID ?>
-                                </td>
-                                <td>
-                                    <?php echo $UserName ?>
-                                </td>
-                                <td>
-                                    <?php echo $UserEmail ?>
-                                </td>
-                                <td>
-                                    <?php echo $UserPassword ?>
-                                </td>
-                                <td>
-                                    <?php
-                                                echo '<a href="update_flight.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                                echo '<a href="areyousure_flight.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                                ?>
-                                </td>
-                            </tr>
-                            <?php 
-                                        }  
-                                ?>
-    
-    
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <div class="flextaa">
+    <form method="POST" action="../includes/menucdu.php">
+        <h1>Add hier je product</h1>
+        <label>Naam product :</label>
+        <input type="text" name="name" required>
+        <label>Image :</label>
+        <input type="file" name="image" required>
+        <label>Price :</label>
+        <input type="int" name="price" required>
+        <input type="submit" name="submit" value="Add">
+        <img src="../images/logo.png" width= 440px>
+    </form>
+
+
     </div>
 
     <div id="Reviews" class="admin-keuzes" style="display: none">

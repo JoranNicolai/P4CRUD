@@ -35,7 +35,7 @@
     <img class="corendon" src="../Images/overons.jpg" width="400px" height="300px">
     <div class="iets">
         <h1 class="overons">Over ons!</h1>
-        <p class="ja">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatibus officia expedita voluptatum velit repellat excepturi nam aperiam? Ratione doloremque enim fugiat optio aliquid pariatur, quidem quod ad. Maxime, enim.</p>
+        <p class="ja">Welkom bij Corendon! boek bij ons een ticket, zoek welke ticket het beste bij je past, stuur een mail en je kan zelfs een account maken om jouw berichten en tickets voor de vliegtuigen in te zien.</p>
     </div>
 </div>
 
