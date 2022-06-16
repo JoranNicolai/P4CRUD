@@ -38,7 +38,9 @@ header {
 }
 
 .headersearch {
-    width: 50%;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,17 +49,13 @@ header {
 }
 
 .img {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    margin-right: 85%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .img {
-        display: none;
+/*  */
     }
 }
 
@@ -841,4 +839,11 @@ h1 {
 .submitbutton1 {
     background-color: whitesmoke;
     border-radius: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .headersearch {
+        display: block;
+        width: 10%;
+    }
 }
