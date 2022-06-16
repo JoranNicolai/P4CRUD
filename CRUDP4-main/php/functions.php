@@ -19,6 +19,9 @@ if (isset($_POST['register'])) {
 if (isset($_POST['login'])) {
 	login();
 }
+if (isset($_POST['review'])) {
+	review();
+}
 
 // REGISTER USER
 function registerAcc(){
@@ -172,6 +175,35 @@ function login(){
 		} else {
 			array_push($errors, "Wrong username/password combination");
 		}
+	}
+}
+
+
+function review(){
+	global $db, $name, $errors, $rating, $subject;
+
+	// grap form values
+	$name = e($_POST['username']);
+	$rating = e($_POST['rating']);
+	$subject = e($_POST['subject']);
+
+	// make sure form is filled properly
+	if (empty($name)) {
+		array_push($errors, "&#1074;&#1114;ï¿½ Name is required");
+	}
+	if (empty($rating)) {
+		array_push($errors, "&#1074;&#1114;ï¿½ Rating is required");
+	}
+	if (empty($subject)) {
+		array_push($errors, "&#1074;&#1114;ï¿½ Description is required");
+	}
+
+	// attempt login if no errors on form
+	if (count($errors) == 0) {
+
+		$query = "INSERT INTO reviews (`name`, `content`, `rating`) 
+		VALUES('$name', '$subject', '$rating')";
+		mysqli_query($db, $query);
 	}
 }
 

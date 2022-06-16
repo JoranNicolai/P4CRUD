@@ -1,3 +1,11 @@
+<?php 
+	include('../php/functions.php');
+	// if (!isAdmin()) {
+	// 	$_SESSION['msg'] = "You must log in first";
+	// 	header('location: login.php');
+	// }
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -74,23 +82,21 @@
     
 <div class="container">
 
-<form method="post">
-    <h1>Review</h1>
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name...">
-        <label for="rating">Rating</label>
-        <select id="rating" name="carlist" form="carform">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <label class="subject" for="subject">Review</label>
-        <textarea id="subject" name="subject" placeholder="Review..." style="height:200px"></textarea>
-
-        <input class="sumbit1" type="submit" value="Submit">
-    </form>
+    <form method="post">
+                <label for="username">Name</label>
+                <input type="text" name="username">
+                <label for="rating">Rating</label>
+                <select id="rating" name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="subject">Review</label>
+                <input type="text" name="subject">
+                <input type="submit" id="submit" name="review" value="Submit">
+              </form>
 </div>
 </div>
 </div>
