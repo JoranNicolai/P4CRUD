@@ -20,6 +20,7 @@
 <body>
     <header class="header">
         <img class="img" src="../Images/logocrud.png" width="200px">
+        <div class="ok">
         <div class="headersearch">
             <a href="index.php">Home</a>
             <a href="vluchten.php">Vluchten</a>
@@ -43,6 +44,7 @@
             }   
         ?>
 
+        </div>
         </div>
     </header>
     <header>
