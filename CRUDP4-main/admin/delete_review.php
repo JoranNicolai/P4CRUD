@@ -6,13 +6,14 @@ if (mysqli_query($db, $sql)) {
 } else {
     echo "Error deleting record: " . mysqli_error($db);
 }
+header('location: ../admin/admin.php');
 mysqli_close($db);
 ?>
 <?php 
 	include('../php/functions.php');
 	if (!isAdmin()) {
-		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
+		$_SESSION['msg'] = "You must review first";
+		header('location: review.php');
 	}
 ?>
 
