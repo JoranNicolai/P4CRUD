@@ -143,17 +143,12 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
                             <h4 class="text-info"><?php echo $row["name"]; ?></h4>
                             <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
                             <h4 class="text-danger"> <?php echo $row["content"]; ?></h4>
-                            
-                            
-                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
-                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
-                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
-                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
-                            <h4 class="text-danger2"><?php echo $row["id"]; ?></h4>
+                        	<h1></h1>
+                            <h1></h1>
+                            <h1></h1>
                             <h4 class="text-danger"><?php echo $row["rating"]; ?>/5 stars</h4>
                             <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
                             <input type="hidden" name="hidden_price" value="<?php echo $row["content"]; ?>" />
-
                             <img src="../Images/star.png" width="100%" >
                         </div>
                     </form>
