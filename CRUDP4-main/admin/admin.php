@@ -217,7 +217,7 @@ $result_reviews = mysqli_query($db,$query);
                                 </td>
                                 <td>
                                     <?php
-                                                echo '<a href="accept_review.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa-solid fa-check"></span></a>';
+                                                echo '<a href="accept_review.php?id='. $UserID .'" class="mr-3" title="Accept Review" data-toggle="tooltip"><span class="fa-solid fa-check"></span></a>';
                                                 echo '<a href="delete_review.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                                 ?>
                                 </td>

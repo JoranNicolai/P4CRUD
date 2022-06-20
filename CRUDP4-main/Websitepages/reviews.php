@@ -1,3 +1,6 @@
+<?php
+$connect = mysqli_connect("localhost", "root", "", "crudp4");
+?>
 <?php 
 	include('../php/functions.php');
 	// if (!isAdmin()) {
@@ -93,6 +96,14 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
+                <label for="land">Land</label>
+                <select id="land" name="land">
+                    <option value="1">spanje</option>
+                    <option value="2">rusland</option>
+                    <option value="3">noord-korea</option>
+                    <option value="4">zuid-korea</option>
+                    <option value="5">Polen</option>
+                </select>
                 <label for="subject">Review</label>
                 <input type="text" name="subject">
                 <input type="submit" id="submit" name="review" value="Submit">
@@ -100,8 +111,61 @@
 </div>
 </div>
 </div>
-<div class="blok30"></div>      
-</body>
-</html>
+<div class="midden6">
+                <h2 class="hoi">Reviews</h1>
+                </div
+<?php
+
+        if (isset($_POST["submit"])) {
+            if (!empty($_POST["search"])) {
+                $query = "SELECT * FROM reviews WHERE checked='yes'";
+                return;
+            } else {
+                $query = "SELECT * FROM reviews WHERE checked='yes'";
+            }
+        } else {
+            $query = "SELECT * FROM reviews WHERE checked='yes'";
+        }
+
+        $result = mysqli_query($connect, $query);
+        if(mysqli_num_rows($result) > 0)
+        {
+            while($row = mysqli_fetch_array($result))
+            {
+                ?>
+        
+     <div class="midden111">  
+        
+   <div class="displayflex111">
+                <div class="col-md-5">
+                    <form method="post" action="menu.php?action=add&id=<?php echo $row["id"]; ?>">
+                        <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px;" >
+                            <h4 class="text-info"><?php echo $row["name"]; ?></h4>
+                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
+                            <h4 class="text-danger"> <?php echo $row["content"]; ?></h4>
+                            
+                            
+                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
+                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
+                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
+                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
+                            <h4 class="text-danger2"><?php echo $row["id"]; ?></h4>
+                            <h4 class="text-danger"><?php echo $row["rating"]; ?>/5 stars</h4>
+                            <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+                            <input type="hidden" name="hidden_price" value="<?php echo $row["content"]; ?>" />
+
+                            <img src="../Images/star.png" width="100%" >
+                        </div>
+                    </form>
+                </div>
+           
+
+                <?php
+            }
+        }
+        ?>
+</div>
+</div>  
+<!-- <script>../js/starrating.js</script> -->
 </body>
 </html>

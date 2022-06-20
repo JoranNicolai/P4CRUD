@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 $connect = mysqli_connect("localhost", "root", "", "crudp4");
@@ -85,13 +86,13 @@ if(isset($_GET["action"]))
 
         if (isset($_POST["submit"])) {
             if (!empty($_POST["search"])) {
-                $query = "SELECT * FROM tbl_product WHERE name = '".$_POST["zoekbalk"]."'";
+                $query = "SELECT * FROM flights WHERE name = '".$_POST["zoekbalk"]."'";
                 return;
             } else {
-                $query = "SELECT * FROM tbl_product ORDER BY id ASC";
+                $query = "SELECT * FROM flights ORDER BY id ASC";
             }
         } else {
-            $query = "SELECT * FROM tbl_product ORDER BY id ASC";
+            $query = "SELECT * FROM flights ORDER BY id ASC";
         }
 
         $result = mysqli_query($connect, $query);
@@ -105,15 +106,15 @@ if(isset($_GET["action"]))
                 <div class="col-md-4">
                     <form method="post" action="menu.php?action=add&id=<?php echo $row["id"]; ?>">
                         <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px;" >
-                            <img src="../images/<?php echo $row["image"]; ?>" class="img-responsive" width="100%" height="auto"  /><br />
+                            <img src="../images/<?php echo $row["id"]; ?>" class="img-responsive" width="100%" height="auto"  /><br />
 
-                            <h4 class="text-info"><?php echo $row["name"]; ?></h4>
+                            <h4 class="text-info"><?php echo $row["location"]; ?></h4>
 
                             <h4 class="text-danger">€ <?php echo $row["price"]; ?></h4>
 
                             <input type="text" name="quantity" value="1" class="form-control" />
 
-                            <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+                            <input type="hidden" name="hidden_name" value="<?php echo $row["location"]; ?>" />
 
                             <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
 
