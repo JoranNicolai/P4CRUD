@@ -98,11 +98,11 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
                 </select>
                 <label for="land">Land</label>
                 <select id="land" name="land">
-                    <option value="1">spanje</option>
-                    <option value="2">rusland</option>
-                    <option value="3">noord-korea</option>
-                    <option value="4">zuid-korea</option>
-                    <option value="5">Polen</option>
+                    <option value="spanje">spanje</option>
+                    <option value="rusland">rusland</option>
+                    <option value="noord-korea">noord-korea</option>
+                    <option value="zuid-korea">zuid-korea</option>
+                    <option value="polen">Polen</option>
                 </select>
                 <label for="subject">Review</label>
                 <input type="text" name="subject">

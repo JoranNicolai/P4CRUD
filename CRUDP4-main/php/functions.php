@@ -186,6 +186,7 @@ function review(){
 	$name = e($_POST['username']);
 	$rating = e($_POST['rating']);
 	$subject = e($_POST['subject']);
+	$land = e($_POST['land']);
 
 	// make sure form is filled properly
 	if (empty($name)) {
@@ -197,12 +198,15 @@ function review(){
 	if (empty($subject)) {
 		array_push($errors, "&#1074;&#1114;ï¿½ Description is required");
 	}
+	if (empty($land)) {
+		array_push($errors, "&#1074;&#1114;ï¿½ Country is required");
+	}
 
 	// attempt login if no errors on form
 	if (count($errors) == 0) {
 
-		$query = "INSERT INTO reviews (`name`, `content`, `rating`) 
-		VALUES('$name', '$subject', '$rating')";
+		$query = "INSERT INTO reviews (`name`, `content`, `rating`, `land`) 
+		VALUES('$name', '$subject', '$rating', '$land')";
 		mysqli_query($db, $query);
 	}
 }
