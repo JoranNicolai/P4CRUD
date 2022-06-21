@@ -101,8 +101,8 @@
                
             
             <div class="blok2">
-                <form class="formpje" action="">
-                    <input class="formpje" type="text" placeholder="Waar begint uw vlucht?">
+                <!-- <form class="formpje" action="/" method="post">
+                    <input class="formpje" type="text" placeholder="Waar begint uw vlucht?" name="start">
                 </form>
                 <form class="formpje" action="">
                     <input class="formpje" type="text" placeholder="Waar gaat uw vlucht heen?">
@@ -117,9 +117,16 @@
                     <input class="formpje" type="number" placeholder="Aantal personen">
                 </form>
                 <?php 
-    // $UserID = $_GET["id"];
-    echo '<a href="search-flight.php?id="><input class="sumbit" type="submit" value="Zoek je vlucht"></a>';
-    ?>
+    $start = $_POST["start"];
+    echo '<a href="search-flight.php?start='. $start .'&end='. $End.'&from='. $from .'&to='. $till .'&amount='. $amount .'"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>';
+    ?> -->
+    <form action="/search_flights.php" method="get" target="_blank">
+  <label for="start">Start location:</label>
+  <input type="text" id="start" name="start"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
             </div>
         </div>
         <div class="blok1">
