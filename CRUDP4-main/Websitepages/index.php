@@ -117,11 +117,9 @@
                     <input class="formpje" type="number" placeholder="Aantal personen">
                 </form>
                 <?php 
-    $UserID = $_GET["id"];
-    echo '<a href="delete.php?id='. $UserID .'">yes</a>';
-    echo '<a href="admin.php">no</a>';
+    // $UserID = $_GET["id"];
+    echo '<a href="search-flight.php?id="><input class="sumbit" type="submit" value="Zoek je vlucht"></a>';
     ?>
-                <a href="#"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
             </div>
         </div>
         <div class="blok1">
