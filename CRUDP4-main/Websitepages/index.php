@@ -102,7 +102,7 @@
             
             <div class="blok2">
 <div class="formpje5">
-    <form class="formpje" action="/search_flights.php" method="get" target="_blank">
+    <form class="formpje" action="search_flights.php" method="get" target="_blank">
     
     <div class="formpje">
         <input placeholder="Vertek locatie..." class="formpje" type="text" id="start" name="start">
