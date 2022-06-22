@@ -503,9 +503,20 @@ header {
 }
 
 .formpje9 {
-    width: 100%;
+    margin-top: 9px;
+    margin-left: 50px;
     display: flex;
     justify-content: center;
+}
+
+.formpje34 {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
 }
 
 .bbbblok3 {
@@ -619,14 +630,14 @@ header {
     ;
 }
 
-.formpje4 {
+
+/* .formpje4 {
     width: 357px;
     height: 50px;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
     box-shadow: 3px 0px 5px black;
-}
+} */
 
 .formpje5 {
     width: 40%;
@@ -935,7 +946,7 @@ h1 {
 
 .col-md-4 {
     width: 300px;
-    height: 400px;
+    height: 420px;
     background-color: whitesmoke;
     border-radius: 10px;
     overflow: hidden;

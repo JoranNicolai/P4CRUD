@@ -158,6 +158,9 @@ if(isset($_GET["action"]))
                             <h4 class="text-danger">
                                 Description: <?php echo $row["description"]; ?>
                             </h4>
+                            <h4 class="text-danger">
+                                vertrek: <?php echo $row["date"]; ?>
+                            </h4>
                             
                             <input class="submitbutton4" type="submit" name="add_to_cart " style="margin-top:5px; " class="btn btn-success " value="Boeken " />
                             </div>
