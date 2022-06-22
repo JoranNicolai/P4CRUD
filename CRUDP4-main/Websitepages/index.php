@@ -101,25 +101,6 @@
                
             
             <div class="blok2">
-                <!-- <form class="formpje" action="/" method="post">
-                    <input class="formpje" type="text" placeholder="Waar begint uw vlucht?" name="start">
-                </form>
-                <form class="formpje" action="">
-                    <input class="formpje" type="text" placeholder="Waar gaat uw vlucht heen?">
-                </form>
-                <form class="formpje1" action="">
-                    <input class="formpje10" type="date" placeholder="Heen">
-                </form>
-                <form class="formpje1" action="">
-                    <input class="formpje10" type="date" placeholder="Heen">
-                </form>
-                <form class="formpje4" action="">
-                    <input class="formpje" type="number" placeholder="Aantal personen">
-                </form>
-                <?php 
-    $start = $_POST["start"];
-    echo '<a href="search-flight.php?start='. $start .'&end='. $End.'&from='. $from .'&to='. $till .'&amount='. $amount .'"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>';
-    ?> -->
 <div class="formpje5">
     <form class="formpje" action="/search_flights.php" method="get" target="_blank">
     
@@ -132,11 +113,9 @@
         <input placeholder="Bestemming..."class="formpje" type="text" id="location" name="location">
     </div>
 
-    <div class="formpje1">
-        <input placeholder="Start Date..." class="formpje10" type="date" id="from" name="from">
-    </div>
-
-
+                    <div class="formpje1">
+                        <input placeholder="Start Date..." class="formpje10" type="date" id="from" name="from">
+                    </div>
     <div class="formpje1">
         <input placeholder="End Date..." class="formpje10" type="date" id="from" name="from">
     </div>
