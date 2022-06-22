@@ -786,10 +786,6 @@ h3 {
     display: flex;
 }
 
-.col-md-4 {
-    width: 200px;
-}
-
 .container999 {
     height: 100%;
 }
@@ -832,12 +828,6 @@ h1 {
     justify-content: center;
 }
 
-.col-md-4 {
-    width: 200px;
-    height: 100px;
-    margin-top: 20px;
-}
-
 .midden1 {
     width: 100%;
     display: flex;
@@ -866,27 +856,34 @@ h1 {
     border: solid 1px black;
     border-radius: 5px;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    column-count: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 50px;
 }
 
 .displayflex111 {
     width: 100%;
-    height: auto;
-    background-color: ghostwhite;
     display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
 }
 
 .midden111 {
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 }
 
 .midden6 {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -900,4 +897,50 @@ h1 {
 
 .text-danger2 {
     color: transparent;
+}
+
+@media screen and (max-width: 600px) {
+    .search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .headerblokjes {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        margin-bottom: 50px;
+        height: 300px;
+        width: 100%;
+    }
+}
+
+.col-md-4 {
+    width: 300px;
+    height: 400px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    border: solid black 1px;
+}
+
+@media screen and (max-width: 600px) {
+    .col-md-4 {
+        height: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.text-info {
+    display: flex;
+}
+
+.submitbutton4 {
+    width: 75px;
 }

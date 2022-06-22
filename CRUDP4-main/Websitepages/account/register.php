@@ -17,6 +17,7 @@
     <title>register</title>
 </head>
 <body>
+  
     <div class="page">
         <div class="container">
           <div class="left">

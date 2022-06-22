@@ -27,12 +27,39 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
         <a href="vluchten.php">Vluchten</a>
         <a href="overons.php">Over ons</a>
         <a href="reviews.php">Reviews</a>
-        <a href="contact.php">Contact</ a>
-        <a href="./account/login.php">Login</a>
+        <a href="contact.php">Contact</ a>    <?php
+        if (!isLoggedIn()) {
+                echo "<a href='./account/login.php'>Login</a>";
+            }
+        ?>
+        
+        <?php
+        if (isAdmin()) {
+            echo "<a href='../admin/admin.php'>Admin</a>";
+            }
+        ?>
+        <?php
+        if (isLoggedIn()) {
+                echo "<a href='logout.php'>Logout</a>";
+            }   
+        ?>
+       
     </div>
 
 </header>
-
+<header>
+        <div class="profile-info-container">
+            <?php
+        if (isLoggedIn()) {
+            $userName = $_SESSION['user']['username'];
+                echo "<h2 class='profile-username'>Welcome $userName!</h2>"; 
+            }
+            if (!isLoggedIn()) {
+                echo "<h2 class='profile-username'>Welcome to corendon!</h2>"; 
+            }
+        ?>
+        </div>
+    </header>
 <header class="headerblokjes">
     <div class="wrap">
         <div class="search">
@@ -86,6 +113,7 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
 <div class="container">
 
     <form method="post">
+        <h1>Plaats hier uw review</h1>
                 <label for="username">Name</label>
                 <input type="text" name="username">
                 <label for="rating">Rating</label>
@@ -98,22 +126,26 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
                 </select>
                 <label for="land">Land</label>
                 <select id="land" name="land">
-                    <option value="spanje">spanje</option>
-                    <option value="rusland">rusland</option>
-                    <option value="noord-korea">noord-korea</option>
-                    <option value="zuid-korea">zuid-korea</option>
-                    <option value="polen">Polen</option>
+                    <option value="Spanje">spanje</option>
+                    <option value="Rusland">rusland</option>
+                    <option value="Noord-korea">noord-korea</option>
+                    <option value="Zuid-korea">zuid-korea</option>
+                    <option value="Polen">Polen</option>
                 </select>
                 <label for="subject">Review</label>
                 <input type="text" name="subject">
-                <input type="submit" id="submit" name="review" value="Submit">
+                <input class="sumbit1" type="submit" id="submit" name="review" value="Submit">
               </form>
 </div>
 </div>
 </div>
 <div class="midden6">
-                <h2 class="hoi">Reviews</h1>
-                </div
+    <h2 class="hoi">Reviews</h1>
+</div>
+<div class="midden111">  
+<div class="displayflex111">
+                
+                
 <?php
 
         if (isset($_POST["submit"])) {
@@ -134,21 +166,23 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
             {
                 ?>
         
-     <div class="midden111">  
+         
+
+     
+
         
-   <div class="displayflex111">
+
                 <div class="col-md-5">
                     <form method="post" action="menu.php?action=add&id=<?php echo $row["id"]; ?>">
                         <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px;" >
                             <h4 class="text-info"><?php echo $row["name"]; ?></h4>
-                            <h4 class="text-danger2"><?php echo $row["id"]; ?>/5 stars</h4>
+                            <h1></h1>
                             <h4 class="text-danger"> <?php echo $row["content"]; ?></h4>
-                        	<h1></h1>
-                            <h1></h1>
-                            <h1></h1>
+                            <h4 class="text-danger"><?php echo $row["land"]; ?></h4>
                             <h4 class="text-danger"><?php echo $row["rating"]; ?>/5 stars</h4>
                             <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
                             <input type="hidden" name="hidden_price" value="<?php echo $row["content"]; ?>" />
+
                             <img src="../Images/star.png" width="100%" >
                         </div>
                     </form>
@@ -162,5 +196,6 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
 </div>
 </div>  
 <!-- <script>../js/starrating.js</script> -->
+</div>
 </body>
 </html>
