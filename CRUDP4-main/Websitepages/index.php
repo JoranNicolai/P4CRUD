@@ -120,12 +120,31 @@
     $start = $_POST["start"];
     echo '<a href="search-flight.php?start='. $start .'&end='. $End.'&from='. $from .'&to='. $till .'&amount='. $amount .'"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>';
     ?> -->
-    <form action="/search_flights.php" method="get" target="_blank">
-  <label for="start">Start location:</label>
-  <input type="text" id="start" name="start"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
+    <form class="formpje" action="/search_flights.php" method="get" target="_blank">
+    
+    <div class="formpje">
+        <input placeholder="Vertek locatie..." class="formpje" type="text" id="start" name="start">
+    </div>
+
+
+    <div class="formpje">
+        <input placeholder="Bestemming..."class="formpje" type="text" id="location" name="location">
+    </div>
+
+    <div class="formpje1">
+        <input placeholder="Start Date..." class="formpje10" type="date" id="from" name="from">
+    </div>
+
+
+    <div class="formpje1">
+        <input placeholder="End Date..." class="formpje10" type="date" id="from" name="from">
+    </div>
+    
+    <div class="formpje4">
+        <input placeholder="Amount of people..." class="formpje" type="number" id="till" name="till">
+    </div>
+  
+    <a><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
 </form>
             </div>
         </div>
