@@ -120,14 +120,15 @@
     $start = $_POST["start"];
     echo '<a href="search-flight.php?start='. $start .'&end='. $End.'&from='. $from .'&to='. $till .'&amount='. $amount .'"><input class="sumbit" type="submit" value="Zoek je vlucht"></a>';
     ?> -->
+<div class="formpje5">
     <form class="formpje" action="/search_flights.php" method="get" target="_blank">
     
     <div class="formpje">
         <input placeholder="Vertek locatie..." class="formpje" type="text" id="start" name="start">
     </div>
+    </div>
 
-
-    <div class="formpje">
+    <div class="formpje9">
         <input placeholder="Bestemming..."class="formpje" type="text" id="location" name="location">
     </div>
 
@@ -141,11 +142,13 @@
     </div>
     
     <div class="formpje4">
-        <input placeholder="Amount of people..." class="formpje" type="number" id="till" name="till">
+        <input placeholder="Amount of people..." class="formpje9" type="number" id="till" name="till">
     </div>
   
     <a><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
 </form>
+
+
             </div>
         </div>
         <div class="blok1">

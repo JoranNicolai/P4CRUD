@@ -495,9 +495,17 @@ header {
     width: 400px;
     height: 50px;
     border-radius: 5px;
-    padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.7%;
+    margin-top: 9px;
+}
+
+.formpje9 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .bbbblok3 {
@@ -616,8 +624,14 @@ header {
     height: 50px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     box-shadow: 3px 0px 5px black;
+}
+
+.formpje5 {
+    width: 40%;
+    display: flex;
+    justify-content: center;
 }
 
 .bbbbblok3 {
