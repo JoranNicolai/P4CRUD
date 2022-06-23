@@ -11,47 +11,13 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
 
 if(isset($_POST["add_to_cart"]))
 {
-    if(isset($_SESSION["shopping_cart"]))
-    {
-        $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
-        if(!in_array($_GET["id"], $item_array_id))
-        {
-            $count = count($_SESSION["shopping_cart"]);
-            $item_array = array(
-                'item_id'			=>	$_GET["id"],
-                'item_name'			=>	$_POST["hidden_name"],
-                'item_price'		=>	$_POST["hidden_price"],
-                'item_quantity'		=>	$_POST["quantity"]
-            );
-            $_SESSION["shopping_cart"][$count] = $item_array;
-        }
-    }
-    else
-    {
-        $item_array = array(
-            'item_id'			=>	$_GET["id"],
-            'item_name'			=>	$_POST["hidden_name"],
-            'item_price'		=>	$_POST["hidden_price"],
-            'item_quantity'		=>	$_POST["quantity"]
-        );
-        $_SESSION["shopping_cart"][0] = $item_array;
-    }
+    $query = "UPDATE users SET vluchten= REPLACE(vluchten, '". $_POST["start"] ."') WHERE id=10";
+    if ($connect->query($query) === TRUE) {
+      } else {
+        echo "Error updating record: " . $connect->error;
+      }
 }
 
-if(isset($_GET["action"]))
-{
-    if($_GET["action"] == "delete")
-    {
-        foreach($_SESSION["shopping_cart"] as $keys => $values)
-        {
-            if($values["item_id"] == $_GET["id"])
-            {
-                unset($_SESSION["shopping_cart"][$keys]);
-
-            }
-        } 
-    }
-}
 ?>
     <!doctype html>
     <html lang="en">
@@ -146,6 +112,7 @@ if(isset($_GET["action"]))
                             
                         <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px; ">
 <div>
+    <form method="post" action="#">
                             <h4 class="text-info">
                                 Locatie: <?php echo $row["location"]; ?>
                             </h4>
@@ -167,7 +134,8 @@ if(isset($_GET["action"]))
                                 Airport: <?php echo $row["begin_airport"]; ?>
                             </h4>
                             <h5>___________________________</h5>
-                            <input class="submitbutton4" type="submit" name="add_to_cart " style="margin-top:5px; " class="btn btn-success " value="Boeken " />
+                            <input type="hidden" value="<?php echo $row["location"]; ?>" name="start"/>
+                            <input class="submitbutton4 btn btn-success" type="submit" name="add_to_cart" style="margin-top:5px; " value="Boeken " />>>>>>>> main
                             </div>
                            
                         </div>
