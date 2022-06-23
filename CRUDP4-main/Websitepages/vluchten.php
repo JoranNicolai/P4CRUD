@@ -117,9 +117,19 @@ if(isset($_GET["action"]))
             </div>
         </header>
         <div class="midden6">
-    <h2 class="hoi">Vluchten</h1>
+    <h2 class="hoi">Vluchten</h1
+    
 </div>
+<div class="countdown2">
+    <div class="countdown">
+        <div>
+        <p id="demo"></p>
+        </div>
+        <p>voordat we failliet gaan</p>
+    </div>
+    </div>
         <div class="midden1">
+            
             <?php
 
         if (isset($_POST["submit"])) {
@@ -154,11 +164,20 @@ if(isset($_GET["action"]))
                             <h4 class="text-danger">Prijs: €
                                 <?php echo $row["price"]; ?>
                             </h4>
-
+                            <h4 class="text-danger">Vliegtuig-plaatsen: 
+                                <?php echo $row["aantal"]; ?>
+                            </h4>
                             <h4 class="text-danger">
                                 Description: <?php echo $row["description"]; ?>
                             </h4>
-                            
+                            <h5>___________________________</h5>
+                            <h4 class="text-danger">
+                                Vertrek: <?php echo $row["date"]; ?>
+                            </h4>
+                            <h4 class="text-danger">
+                                Airport: <?php echo $row["begin_airport"]; ?>
+                            </h4>
+                            <h5>___________________________</h5>
                             <input class="submitbutton4" type="submit" name="add_to_cart " style="margin-top:5px; " class="btn btn-success " value="Boeken " />
                             </div>
                            
@@ -177,7 +196,16 @@ if(isset($_GET["action"]))
         <div class="blok1 ">
 
         </div>
+       
+
+
+<p id="demo"></p>
+
+
+
+
 
     </body>
-
+   
+    <script src="../js/main.js"></script>
     </html>
