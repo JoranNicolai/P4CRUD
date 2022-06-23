@@ -119,15 +119,18 @@ if(isset($_GET["action"]))
         <div class="midden6">
     <h2 class="hoi">Vluchten</h1>
 </div>
-        <div class="midden1">
+        <div class="midden1"> 
+
             <?php
 
         if (isset($_POST["submit"])) {
-            $query = "SELECT * FROM flights WHERE location like '%".$_GET["start"]."%'";
+            $query = "SELECT * FROM flights WHERE location like '%".$_GET["start"]."%' and date like '".$_GET["startDate"]."%' and begin_airport like '%".$_GET["location"]."%'"; 
         } else {
-            $query = "SELECT * FROM flights WHERE location like '%".$_GET["start"]."%'";
+            $query = "SELECT * FROM flights WHERE location like '%".$_GET["start"]."%' and date like '".$_GET["startDate"]."%' and begin_airport like '%".$_GET["location"]."%'"; 
         }
-
+       
+        
+       
         $result = mysqli_query($connect, $query);
         if(mysqli_num_rows($result) > 0)
         {
@@ -140,6 +143,7 @@ if(isset($_GET["action"]))
                 <div>
                             <img src="../../CRUDP4-main/Images/<?php echo $row["image"]; ?>" class="img-responsive" width="100%" height="250px"  /><br />
                             </div>
+                            
                         <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px; ">
 <div>
                             <h4 class="text-info">
@@ -149,17 +153,27 @@ if(isset($_GET["action"]))
                             <h4 class="text-danger">Prijs: €
                                 <?php echo $row["price"]; ?>
                             </h4>
-
+                            <h4 class="text-danger">Vliegtuig-plaatsen: 
+                                <?php echo $row["aantal"]; ?>
+                            </h4>
                             <h4 class="text-danger">
                                 Description: <?php echo $row["description"]; ?>
                             </h4>
-                            
+                            <h5>___________________________</h5>
+                            <h4 class="text-danger">
+                                Vertrek: <?php echo $row["date"]; ?>
+                            </h4>
+                            <h4 class="text-danger">
+                                Airport: <?php echo $row["begin_airport"]; ?>
+                            </h4>
+                            <h5>___________________________</h5>
                             <input class="submitbutton4" type="submit" name="add_to_cart " style="margin-top:5px; " class="btn btn-success " value="Boeken " />
                             </div>
                            
                         </div>
                      
                     </form>
+                   
                    
                 </div>
 
@@ -168,6 +182,8 @@ if(isset($_GET["action"]))
             }
         }
         ?>
+
+        
         </div>
         <div class="blok1 ">
 

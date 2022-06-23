@@ -71,7 +71,37 @@
     </header>
 <div class="containerblok22">
 <div class="blok22">
-    <img class="corendon" src="../Images/overons.jpg" width="400px" height="300px">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="../Images/belgie.jpeg" style="width:100%">
+  <div class="text">België</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="../Images/turkije.jpeg" style="width:100%">
+  <div class="text">Turkije</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="../Images/dubai.jpeg" style="width:100%">
+  <div class="text">Dubai</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
     <div class="iets">
         <h1 class="overons">Over ons!</h1>
         <p class="ja">Welkom bij Corendon! boek bij ons een ticket, zoek welke ticket het beste bij je past, stuur een mail en je kan zelfs een account maken om jouw berichten en tickets voor de vliegtuigen in te zien.</p>
@@ -84,4 +114,5 @@
 
     </div>
 </body>
+<script src="../js/main.js"></script>
 </html>

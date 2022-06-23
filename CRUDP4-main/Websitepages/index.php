@@ -21,30 +21,30 @@
     <header class="header">
         <img class="img" src="../Images/logocrud.png" width="200px">
         <div class="ok">
-        <div class="headersearch">
-            <a href="index.php">Home</a>
-            <a href="vluchten.php">Vluchten</a>
-            <a href="overons.php">Over ons</a>
-            <a href="reviews.php">Reviews</a>
-            <a href="contact.php">Contact</a>
-            <?php
+            <div class="headersearch">
+                <a href="index.php">Home</a>
+                <a href="vluchten.php">Vluchten</a>
+                <a href="overons.php">Over ons</a>
+                <a href="reviews.php">Reviews</a>
+                <a href="contact.php">Contact</a>
+                <?php
         if (!isLoggedIn()) {
                 echo "<a href='./account/login.php'>Login</a>";
             }
         ?>
-        
-        <?php
+
+                    <?php
         if (isAdmin()) {
             echo "<a href='../admin/admin.php'>Admin</a>";
             }
         ?>
-        <?php
+                        <?php
         if (isLoggedIn()) {
                 echo "<a href='logout.php'>Logout</a>";
             }   
         ?>
 
-        </div>
+            </div>
         </div>
     </header>
     <header>
@@ -73,59 +73,59 @@
     </header>
     <footer>
         <div class="midden">
-                <div class="blok3">
-                    <a href="index.php">
-                        <h3>Vliegtickets</h3>
-                    </a>
-                </div>
-                <div class="blok4">
-                    <a href="tickettabel/bundels.php">
-                        <h3>Vlucht en hotel</h3>
-                    </a>
-                </div>
-                <div class="blok5">
-                    <a href="tickettabel/hotels.php">
-                        <h3>Hotels</h3>
-                    </a>
-                </div>
-                <div class="blok6">
-                    <a href="tickettabel/taxi.php">
-                        <h3>Taxi's</h3>
-                    </a>
-                </div>
-                <div class="blok7">
-                    <a href="tickettabel/verhuur.php">
-                        <h3>Auto verhuur</h3>
-                    </a>
-                </div>
-               
-            
+            <div class="blok3">
+                <a href="index.php">
+                    <h3>Vliegtickets</h3>
+                </a>
+            </div>
+            <div class="blok4">
+                <a href="tickettabel/bundels.php">
+                    <h3>Vlucht en hotel</h3>
+                </a>
+            </div>
+            <div class="blok5">
+                <a href="tickettabel/hotels.php">
+                    <h3>Hotels</h3>
+                </a>
+            </div>
+            <div class="blok6">
+                <a href="tickettabel/taxi.php">
+                    <h3>Taxi's</h3>
+                </a>
+            </div>
+            <div class="blok7">
+                <a href="tickettabel/verhuur.php">
+                    <h3>Auto verhuur</h3>
+                </a>
+            </div>
+
+
             <div class="blok2">
-<div class="formpje5">
-    <form class="formpje" action="search_flights.php" method="get" target="_blank">
-    
-    <div class="formpje">
-        <input placeholder="Vertek locatie..." class="formpje" type="text" id="start" name="start">
-    </div>
-    </div>
+                <div class="formpje5">
+                    <form class="formpje" action="search_flights.php" method="get">
 
-    <div class="formpje9">
-        <input placeholder="Bestemming..."class="formpje" type="text" id="location" name="location">
-    </div>
+                        <div class="formpje">
+                            <input placeholder="Bestemming..." class="formpje" type="text" id="start" name="start">
+                        </div>
+                </div>
 
-                    <div class="formpje1">
-                        <input placeholder="Start Date..." class="formpje10" type="date" id="from" name="from">
-                    </div>
-    <div class="formpje1">
-        <input placeholder="End Date..." class="formpje10" type="date" id="from" name="from">
-    </div>
-    
-    <div class="formpje4">
-        <input placeholder="Amount of people..." class="formpje34" type="number" id="till" name="till">
-    </div>
-  
-    <a><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
-</form>
+                <div class="formpje9">
+                    <input placeholder="Vertek locatie..." class="formpje" type="text" id="location" name="location">
+                </div>
+
+                <div class="formpje1" method="get">
+                    <input placeholder="Start Date..." class="formpje10" type="text" id="from" name="startDate">
+                </div>
+                <div class="formpje1" method="get">
+                    <input placeholder="End Date..." class="formpje10" type="text" id="from" name="endDate">
+                </div>
+
+                <div class="formpje4" method="get">
+                    <input placeholder="Amount of people..." class="formpje34" type="number" id="till" name="till">
+                </div>
+
+                <a><input class="sumbit" type="submit" value="Zoek je vlucht"></a>
+                </form>
 
 
             </div>
@@ -134,13 +134,15 @@
 
 
         </div>
-      <div class="blok10">
-        <div class="blok1">
-        <a href="klikhier.php"><h5>Privacy policy en Algemene voorwaarden.</h5></a>
-        </div>
+        <div class="blok10">
+            <div class="blok1">
+                <a href="klikhier.php">
+                    <h5>Privacy policy en Algemene voorwaarden.</h5>
+                </a>
+            </div>
         </div>
     </footer>
-    
+
 </body>
 
 </html>
