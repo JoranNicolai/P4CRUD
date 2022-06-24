@@ -18,6 +18,10 @@
 $query = "SELECT * FROM `reviews` WHERE checked='no';";
 $result_reviews = mysqli_query($db,$query);
 ?>
+<?php 
+$query = "SELECT * FROM boekingen";
+$result_boekingen = mysqli_query($db,$query);
+?>
 
 
 <!DOCTYPE html>
@@ -55,6 +59,7 @@ $result_reviews = mysqli_query($db,$query);
         <a onclick="return openCity('Accounts')" class="admin-button">Manage Accounts</a>
         <a onclick="return openCity('Flights')" class="admin-button">Manage Locations</a>
         <a onclick="return openCity('Reviews')" class="admin-button">Manage Reviews</a>
+        <a onclick="return openCity('Boekingen')" class="admin-button">Manage Reservations</a>
         <a href="../Websitepages/index.php" class="admin-button">Back</a>
     </div>
 
@@ -219,6 +224,60 @@ $result_reviews = mysqli_query($db,$query);
                                     <?php
                                                 echo '<a href="accept_review.php?id='. $UserID .'" class="mr-3" title="Accept Review" data-toggle="tooltip"><span class="fa-solid fa-check"></span></a>';
                                                 echo '<a href="delete_review.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                                ?>
+                                </td>
+                            </tr>
+                            <?php 
+                                        }  
+                                ?>
+    
+    
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="Boekingen" class="admin-keuzes container" style="display: none;">
+        <div class="container">
+            <div class="row">
+                <div class="col m-auto">
+                    <div class="card mt-5">
+                        <table class="table table-bordered">
+                            <tr>
+                                <td>boekingID</td>
+                                <td>flightID</td>
+                                <td>userID</td>
+                                <td>Action</td>
+                            </tr>
+    
+                            <?php 
+                                        
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            $UserID = $row['id'];
+                                            $UserName = $row['username'];
+                                            $UserEmail = $row['email'];
+                                            $UserPassword = $row['password'];
+                                ?>
+                            <tr>
+                                <td>
+                                    <?php echo $UserID ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserName ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserEmail ?>
+                                </td>
+                                <td>
+                                    <?php echo $UserPassword ?>
+                                </td>
+                                <td>
+                                    <?php
+                                                echo '<a href="update.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                                                echo '<a href="areyousure.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                                 ?>
                                 </td>
                             </tr>

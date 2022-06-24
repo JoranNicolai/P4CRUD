@@ -11,7 +11,13 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
 
 if(isset($_POST["add_to_cart"]))
 {
-    $query = "UPDATE users SET vluchten= REPLACE(vluchten, '". $_POST["start"] ."') WHERE id=10";
+    $query = "SELECT * FROM flights WHERE location like '%".$_GET["start"]."%' and date like '".$_GET["startDate"]."%' and begin_airport like '%".$_GET["location"]."%'"; 
+    $result = mysqli_query($connect, $query);
+    $row = mysqli_fetch_array($result);
+    $userID = $_SESSION["user"]["id"];
+    $flightID = $row['id'];
+
+    $query = "INSERT INTO boekingen (flightID, userID) VALUES ('$flightID', '$userID')";
     if ($connect->query($query) === TRUE) {
       } else {
         echo "Error updating record: " . $connect->error;
@@ -135,7 +141,7 @@ if(isset($_POST["add_to_cart"]))
                             </h4>
                             <h5>___________________________</h5>
                             <input type="hidden" value="<?php echo $row["location"]; ?>" name="start"/>
-                            <input class="submitbutton4 btn btn-success" type="submit" name="add_to_cart" style="margin-top:5px; " value="Boeken " />>>>>>>> main
+                            <input class="submitbutton4 btn btn-success" type="submit" name="add_to_cart" style="margin-top:5px; " value="Boeken " />
                             </div>
                            
                         </div>
