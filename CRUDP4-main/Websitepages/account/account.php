@@ -144,7 +144,7 @@ if(isset($_GET["action"]))
                 <div class="col-md-41">
                 <div>
                         <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px; ">
-<div>
+<div>                       <h1>Jouw gegevens</h1>
                             <h4 class="text-info">
                                 Username: <?php echo $row["username"]; ?>
                             </h4>
@@ -153,6 +153,9 @@ if(isset($_GET["action"]))
                             </h4>
                             <h4 class="text-danger">Password:
                                 <?php echo $row["password"]; ?>
+                            </h4>
+                            <h4 class="text-danger">Id:
+                                <?php echo $row["id"]; ?>
                             </h4>
                           
                            
@@ -167,6 +170,62 @@ if(isset($_GET["action"]))
             }
         }
         ?>
+
+<?php
+    
+    if (isset($_POST["submit"])) {
+        if (!empty($_POST["search"])) {
+            $sessionID = $_SESSION["user"]["id"];
+            $query = "SELECT * FROM boekingen WHERE userID = 10";
+            return;
+        } else {
+            $sessionID = $_SESSION["user"]["id"];
+            $query = "SELECT * FROM boekingen WHERE userID = 10";
+        }
+    } else {
+        $sessionID = $_SESSION["user"]["id"];
+        $query = "SELECT * FROM boekingen WHERE userID = 10";
+    }
+
+    $result = mysqli_query($connect, $query);
+    if(mysqli_num_rows($result) > 0)
+    {
+        while($row = mysqli_fetch_array($result))
+        {
+            ?>
+
+
+            <div class="col-md-42">
+            <div>
+                    <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px; ">
+<div>                       <h1>Jouw Boekingen</h1>
+
+                        <h4 class="text-info">
+                            UserID: <?php echo $row["userID"]; ?>
+                        </h4>
+                        <h4 class="text-info">
+                            UserID: <?php echo $row["userID"]; ?>
+                        </h4>
+                        <h4 class="text-danger">VluchtID:
+                            <?php echo $row["flightID"]; ?>
+                        </h4>
+                        <h4 class="text-danger">Vlucht:
+                            <?php echo $row["name"]; ?>
+                        </h4>
+                      
+                      
+                       
+                  </div>
+                 
+                </form>
+               
+            </div>
+
+
+            <?php
+        }
+    }
+    ?>
         </div>
         <div class="blok1 ">
 
