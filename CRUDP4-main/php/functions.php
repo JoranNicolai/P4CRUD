@@ -144,6 +144,15 @@ function isLoggedIn()
 	}
 }
 
+function isLoggedIn2()
+{
+	if (isset($_SESSION['user'])) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
 // log user out if logout button clicked
 if (isset($_GET['logout'])) {
 	session_destroy();
