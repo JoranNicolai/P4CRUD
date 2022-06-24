@@ -1,5 +1,5 @@
 <?php 
-	include('../php/functions.php');
+	include('../../php/functions.php');
 	// if (!isAdmin()) {
 	// 	$_SESSION['msg'] = "You must log in first";
 	// 	header('location: login.php');
@@ -61,35 +61,34 @@ if(isset($_GET["action"]))
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
-        <link rel="stylesheet" href="../CSS/styles.css">
+        <link rel="stylesheet" href="../../CSS/styles.css">
     </head>
 
     <body>
 
         <header class="header">
-            <img class="img" src="../Images/logocrud.png" width="200px">
+            <img class="img" src="../../Images/logocrud.png" width="200px">
             <div class="headersearch">
-                <a href="index.php">Home</a>
-                <a href="vluchten.php">Vluchten</a>
-                <a href="overons.php">Over ons</a>
-                <a href="reviews.php">Reviews</a>
-                <a href="contact.php">Contact</a>
+                <a href="../index.php">Home</a>
+                <a href="../vluchten.php">Vluchten</a>
+                <a href="../overons.php">Over ons</a>
+                <a href="../reviews.php">Reviews</a>
+                <a href="../contact.php">Contact</a>
                 <?php
         if (!isLoggedIn()) {
-                echo "<a href='./account/login.php'>Login</a>";
+                echo "<a href='./../account/login.php'>Login</a>";
             }
         ?>
-
-<?php
+            <?php
         if (isAdmin()) {
-            echo "<a href='../admin/admin.php'>Admin</a>";
+            echo "<a href='../../admin/admin.php'>Admin</a>";
             } elseif (isLoggedIn()) {
-            echo "<a href='account/account.php'>Account</a>";
+            echo "<a href='../account/account.php'>Account</a>";
             }
         ?>
                         <?php
         if (isLoggedIn()) {
-                echo "<a href='logout.php'>Logout</a>";
+                echo "<a href='../logout.php'>Logout</a>";
             }   
         ?>
 
@@ -118,31 +117,20 @@ if(isset($_GET["action"]))
                 </div>
             </div>
         </header>
-        <div class="midden6">
-    <h2 class="hoi">Vluchten</h1
-    
-</div>
-<div class="countdown2">
-    <div class="countdown">
-        <div>
-        <p id="demo"></p>
-        </div>
-        <p> speciale aanbieding!    </p>
-    </div>
-    </div>
+        
         <div class="midden1">
             
             <?php
-
+    
         if (isset($_POST["submit"])) {
             if (!empty($_POST["search"])) {
-                $query = "SELECT * FROM flights WHERE name = '".$_POST["zoekbalk"]."'";
+                $query = "SELECT * FROM users WHERE username = '$userName'";
                 return;
             } else {
-                $query = "SELECT * FROM flights ORDER BY id ASC";
+                $query = "SELECT * FROM users WHERE username = '$userName'";
             }
         } else {
-            $query = "SELECT * FROM flights ORDER BY id ASC";
+            $query = "SELECT * FROM users WHERE username = '$userName'";
         }
 
         $result = mysqli_query($connect, $query);
@@ -153,37 +141,22 @@ if(isset($_GET["action"]))
                 ?>
 
 
-                <div class="col-md-4">
+                <div class="col-md-41">
                 <div>
-                            <img src="../../CRUDP4-main/Images/<?php echo $row["image"]; ?>" class="img-responsive" width="100%" height="250px"  /><br />
-                            </div>
                         <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px; ">
 <div>
                             <h4 class="text-info">
-                                Locatie: <?php echo $row["location"]; ?>
+                                Username: <?php echo $row["username"]; ?>
                             </h4>
-
-                            <h4 class="text-danger">Prijs: €
-                                <?php echo $row["price"]; ?>
+                            <h4 class="text-danger">Email:
+                                <?php echo $row["email"]; ?>
                             </h4>
-                            <h4 class="text-danger">Vliegtuig-plaatsen: 
-                                <?php echo $row["aantal"]; ?>
+                            <h4 class="text-danger">Password:
+                                <?php echo $row["password"]; ?>
                             </h4>
-                            <h4 class="text-danger">
-                                Description: <?php echo $row["description"]; ?>
-                            </h4>
-                            <h5>___________________________</h5>
-                            <h4 class="text-danger">
-                                Vertrek: <?php echo $row["date"]; ?>
-                            </h4>
-                            <h4 class="text-danger">
-                                Airport: <?php echo $row["begin_airport"]; ?>
-                            </h4>
-                            <h5>___________________________</h5>
-                            <input class="submitbutton4" type="submit" name="add_to_cart " style="margin-top:5px; " class="btn btn-success " value="Boeken " />
-                            </div>
+                          
                            
-                        </div>
+                      </div>
                      
                     </form>
                    
@@ -208,5 +181,5 @@ if(isset($_GET["action"]))
 
     </body>
    
-    <script src="../js/main.js"></script>
+    <script src="../../js/main.js"></script>
     </html>

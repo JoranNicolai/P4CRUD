@@ -795,6 +795,18 @@ h3 {
     border-bottom-right-radius: 20px;
 }
 
+@media screen and (min-width: 480px) {
+    .blok22 {
+        width: 75%;
+        height: auto;
+        background-color: whitesmoke;
+        opacity: .8;
+        display: flex;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
 .containerblok22 {
     display: flex;
     justify-content: center;
@@ -809,6 +821,14 @@ h3 {
 .overons {
     margin-left: 250px;
     display: flex;
+}
+
+@media screen and (min-width: 480px) {
+    .overons {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
 }
 
 .container999 {

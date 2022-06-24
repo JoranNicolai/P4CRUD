@@ -98,6 +98,15 @@ function isAdmin()
 	}
 }
 
+function isUser()
+{
+	if (isset($_SESSION['user']) && $_SESSION['user']['username'] == '*' ) {
+		return true;
+	}else{
+		return false;
+	}
+}
+
 // return user array from their id
 function getUserById($id){
 	global $db;

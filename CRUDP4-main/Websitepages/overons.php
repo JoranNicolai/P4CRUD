@@ -31,13 +31,15 @@
                 echo "<a href='./account/login.php'>Login</a>";
             }
         ?>
-        
-        <?php
+
+                <?php
         if (isAdmin()) {
             echo "<a href='../admin/admin.php'>Admin</a>";
+            } elseif (isLoggedIn()) {
+            echo "<a href='account/account.php'>Account</a>";
             }
         ?>
-        <?php
+                    <?php
         if (isLoggedIn()) {
                 echo "<a href='logout.php'>Logout</a>";
             }   
@@ -69,50 +71,59 @@
             </div>
         </div>
     </header>
-<div class="containerblok22">
-<div class="blok22">
-<div class="slideshow-container">
+    <div class="containerblok22">
+        <div class="blok22">
+            <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="../Images/belgie.jpeg" style="width:100%">
-  <div class="text">België</div>
-</div>
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="../Images/belgie.jpeg" style="width:100%">
+                    <div class="text">België</div>
+                </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="../Images/turkije.jpeg" style="width:100%">
-  <div class="text">Turkije</div>
-</div>
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="../Images/turkije.jpeg" style="width:100%">
+                    <div class="text">Turkije</div>
+                </div>
 
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="../Images/dubai.jpeg" style="width:100%">
-  <div class="text">Dubai</div>
-</div>
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="../Images/dubai.jpeg" style="width:100%">
+                    <div class="text">Dubai</div>
+                </div>
 
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
 
-</div>
-<br>
+            </div>
+            <br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-    <div class="iets">
-        <h1 class="overons">Over ons!</h1>
-        <p class="ja">Welkom bij Corendon! boek bij ons een ticket, zoek welke ticket het beste bij je past, stuur een mail en je kan zelfs een account maken om jouw berichten en tickets voor de vliegtuigen in te zien.</p>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <div class="iets">
+                <h1 class="overons">Over ons!</h1>
+                <p class="ja">Welkom bij Corendon! boek bij ons een ticket, zoek welke ticket het beste bij je past, stuur een mail en je kan zelfs een account maken om jouw berichten en tickets voor de vliegtuigen in te zien. </p>
+                <br>
+                <p>Feitjes over ons!</p>
+                <br>
+                <p>- Al meer dan 10 jaar best getest.</p>
+                <p>- Wij werken veel samen met andere bedrijven </p>
+                <p>- Wij zijn altijd de goedkoopste.</p>
+                <br>
+                <p>Email: corendon@gmail.com Telefoon: +31 627445897</p>
+            </div>
+        </div>
+
     </div>
-</div>
-
-</div>
 
     <div class="blok1">
 
     </div>
 </body>
 <script src="../js/main.js"></script>
+
 </html>
