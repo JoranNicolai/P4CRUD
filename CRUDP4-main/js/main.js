@@ -52,3 +52,12 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 //einde slideshow
+//form validatie
+function validateForm() {
+    let x = document.forms["username"]["username"].value;
+    if (x == "") {
+        alert("vul eerst je naam in om verder te gaan!");
+        return false;
+    }
+}
+//einde form validatie

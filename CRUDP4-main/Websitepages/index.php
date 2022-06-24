@@ -36,6 +36,8 @@
                     <?php
         if (isAdmin()) {
             echo "<a href='../admin/admin.php'>Admin</a>";
+            } elseif (isLoggedIn()) {
+            echo "<a href='account/account.php'>Account</a>";
             }
         ?>
                         <?php

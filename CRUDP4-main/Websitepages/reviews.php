@@ -36,6 +36,8 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
         <?php
         if (isAdmin()) {
             echo "<a href='../admin/admin.php'>Admin</a>";
+            } elseif (isLoggedIn()) {
+            echo "<a href='account/account.php'>Account</a>";
             }
         ?>
         <?php
@@ -112,7 +114,7 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
     
 <div class="container">
 
-    <form method="post">
+    <form name="username"  onsubmit="return validateForm()" method="post">
         <h1>Plaats hier uw review</h1>
                 <label for="username">Name</label>
                 <input type="text" name="username">
@@ -140,6 +142,8 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
 </div>
 </div>
 </div>
+
+
 <div class="midden6">
     <h2 class="hoi">Reviews</h1>
 </div>
@@ -196,7 +200,7 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
         ?>
 </div>
 </div>  
-<!-- <script>../js/starrating.js</script> -->
+<script src="../js/main.js"></script>
 </div>
 </body>
 </html>
