@@ -254,12 +254,11 @@ $result_boekingen = mysqli_query($db,$query);
     
                             <?php 
                                         
-                                        while($row=mysqli_fetch_assoc($result))
+                                        while($row=mysqli_fetch_assoc($result_boekingen))
                                         {
-                                            $UserID = $row['id'];
-                                            $UserName = $row['username'];
-                                            $UserEmail = $row['email'];
-                                            $UserPassword = $row['password'];
+                                            $UserID = $row['boekingID'];
+                                            $UserName = $row['flightID'];
+                                            $UserEmail = $row['userID'];
                                 ?>
                             <tr>
                                 <td>
