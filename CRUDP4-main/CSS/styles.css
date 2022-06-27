@@ -84,7 +84,7 @@ header {
 
 .blok1 {
     margin-top: 400px;
-    height: 500px;
+    height: 60px;
     width: 100%;
     background-color: whitesmoke;
     opacity: .9;
@@ -1177,11 +1177,6 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.white2 {
-    width: 100%;
-    background-color: rgba(245, 245, 245, 0.839);
 }
 
 .white2 {
