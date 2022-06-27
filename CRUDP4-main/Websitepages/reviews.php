@@ -188,7 +188,10 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
                             <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
                             <input type="hidden" name="hidden_price" value="<?php echo $row["content"]; ?>" />
 
-                            <img src="../Images/star.png" width="100%" >
+                            <img src="../Images/star.png" width="90%%" >
+                            <div class="rating">
+    
+   </div>
                         </div>
                     </form>
                 </div>
@@ -200,6 +203,7 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
         ?>
 </div>
 </div>  
+
 <script src="../js/main.js"></script>
 </div>
 </body>

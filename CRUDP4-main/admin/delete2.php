@@ -1,19 +1,19 @@
+<?php 
+	include('../php/functions.php');
+	if (!isAdmin()) {
+		$_SESSION['msg'] = "You must log in first";
+		header('location: login.php');
+	}
+?>
 <?php
 include_once '../php/functions.php';
-$sql = "DELETE FROM flights WHERE id='" . $_GET["id"] . "'";
+$sql = "DELETE FROM boekingen WHERE id='" . $_GET["userID"] . "'";
 if (mysqli_query($db, $sql)) {
     echo "Record deleted successfully";
 } else {
     echo "Error deleting record: " . mysqli_error($db);
 }
 mysqli_close($db);
-?>
-<?php 
-	
-	if (!isAdmin()) {
-		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
-	}
 ?>
 
 <!DOCTYPE html>

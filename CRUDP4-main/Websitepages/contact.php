@@ -26,6 +26,7 @@
             <a href="overons.php">Over ons</a>
             <a href="reviews.php">Reviews</a>
             <a href="contact.php">Contact</a>
+            
             <?php
         if (!isLoggedIn()) {
                 echo "<a href='./account/login.php'>Login</a>";
@@ -64,15 +65,15 @@
     <header class="headerblokjes">
         <div class="wrap">
             <div class="search">
-                <input type="search" class="searchTerm" placeholder="Search...">
-
+            <p>
+<input type="Search" class="searchTerm" onclick="myMove()" value="Klik mij voor JS voorbeeld! "></button> 
+</p>
+                
                 <i class="fa fa-search"></i>
                 </button>
             </div>
         </div>
     </header>
-<!DOCTYPE html>
-<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -105,12 +106,34 @@
             padding: 20px;
         }
     </style>
-</head>
-<body>
+
+<style>
+#myContainer {
+
+  position: relative;
+  background: transparent;
+}
+#myAnimation {
+  position: absolute;
+  background-color: transparent;
+}
+</style>
+
+
+
+
+<div id ="myContainer">
+<div id ="myAnimation">✈</div>
+</div>
+
+
+
+
+    </body>
 
 <div class="displayflex">
 <div class="container222">
-    
+
 <div class="container">
 
 <form action="https://formsubmit.co/jorannicolai@gmail.com" method="post">
@@ -123,12 +146,16 @@
         <textarea id="subject" name="subject" placeholder="Wat wilt u sturen?..." style="height:200px"></textarea>
 
         <input class="sumbit1" type="submit" value="Submit">
+ 
     </form>
+  
 </div>
 </div>
 </div>
-<div class="blok30"></div>      
+<div class="blok30"></div>     
+
 </body>
+<script src="../js/main.js"></script>
 </html>
 </body>
 </html>

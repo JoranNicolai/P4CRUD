@@ -238,32 +238,43 @@ if(isset($_GET["action"]))
                             <th>userID</th>
                             <th>boekID</th>
                             <th>vluchtID</th>
-                            <th>Delete</th>
+                            <th>Anuleren</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
-                        <tr>
-                            <td class="white">
-                                <?php echo $row["name"]; ?>
-                            </td>
-                            <td class="white">
-                                <?php echo $row["userID"]; ?>
-                            </td>
-                            <td class="white">
-                                <?php echo $row["boekingID"]; ?>
-                            </td>
-                            <td class="white">
-                                <?php echo $row["flightID"]; ?>
-                            </td>
-                            <td class="white">
-                                <form action="#">
-                                <input class="sumbit2" type="submit" id="submit44" name="submit44" value="delete">
-                                </form>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                    <?php 
+                                        
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            $UserID = $row['userID'];
+                                            $flightID = $row['flightID'];
+                                            $bookingID = $row['boekingID'];
+                                            $name = $row['name'];
+                                ?>
+                            <tr>
+                                <td>
+                                    <?php echo $UserID ?>
+                                </td>
+                                <td>
+                                    <?php echo $flightID ?>
+                                </td>
+                                <td>
+                                    <?php echo $bookingID ?>
+                                </td>
+                                <td>
+                                    <?php echo $name ?>
+                                </td>
+                                <td>
+                                    <?php
+                                                echo '<a href="../../admin/delete_boeking.php?boekingID='. $bookingID .'" class="mr-3" title="Update Record" data-toggle="tooltip">sup<span class="fa fa-pencil"></span></a>';
+                                                
+                                                ?>
+                                </td>
+                            </tr>
+                            <?php 
+                                        }  
+                                ?>
             </div>
 
             <?php

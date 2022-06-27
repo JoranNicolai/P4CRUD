@@ -163,7 +163,8 @@ $result_boekingen = mysqli_query($db,$query);
                                 <td>
                                     <?php
                                                 echo '<a href="update_flight.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                                echo '<a href="areyousure_flight.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                                echo '<a href="delete_flight.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+
                                                 ?>
                                 </td>
                             </tr>
@@ -249,17 +250,17 @@ $result_boekingen = mysqli_query($db,$query);
                                 <td>boekingID</td>
                                 <td>flightID</td>
                                 <td>userID</td>
-                                <td>Action</td>
+                                <td>flight name</td>
                             </tr>
     
                             <?php 
                                         
-                                        while($row=mysqli_fetch_assoc($result))
+                                        while($row=mysqli_fetch_assoc($result_boekingen))
                                         {
-                                            $UserID = $row['id'];
-                                            $UserName = $row['username'];
-                                            $UserEmail = $row['email'];
-                                            $UserPassword = $row['password'];
+                                            $UserID = $row['boekingID'];
+                                            $UserName = $row['flightID'];
+                                            $UserEmail = $row['userID'];
+                                            $UserPassword = $row['name'];
                                 ?>
                             <tr>
                                 <td>
@@ -275,9 +276,9 @@ $result_boekingen = mysqli_query($db,$query);
                                     <?php echo $UserPassword ?>
                                 </td>
                                 <td>
-                                    <?php
-                                                echo '<a href="update.php?id='. $UserID .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                                echo '<a href="areyousure.php?id='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                       <?php
+                                                echo '<a href="delete_boeking.php?boekingID='. $UserID .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                                
                                                 ?>
                                 </td>
                             </tr>
