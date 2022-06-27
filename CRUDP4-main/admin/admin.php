@@ -260,7 +260,6 @@ $result_boekingen = mysqli_query($db,$query);
                                             $UserID = $row['boekingID'];
                                             $UserName = $row['flightID'];
                                             $UserEmail = $row['userID'];
-                                            $UserPassword = $row['name'];
                                 ?>
                             <tr>
                                 <td>
