@@ -1,15 +1,16 @@
 <?php
 include_once '../php/functions.php';
-$sql = "DELETE FROM flights WHERE id='" . $_GET["id"] . "'";
+$sql = "DELETE FROM boekingen WHERE boekingID='" . $_GET["boekingID"] . "'";
 if (mysqli_query($db, $sql)) {
     echo "Record deleted successfully";
+    header('location: ../websitepages/account/account.php');
 } else {
     echo "Error deleting record: " . mysqli_error($db);
 }
 mysqli_close($db);
 ?>
 <?php 
-	
+	include('../php/functions.php');
 	if (!isAdmin()) {
 		$_SESSION['msg'] = "You must log in first";
 		header('location: login.php');

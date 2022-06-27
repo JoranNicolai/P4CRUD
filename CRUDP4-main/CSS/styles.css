@@ -84,7 +84,7 @@ header {
 
 .blok1 {
     margin-top: 400px;
-    height: 500px;
+    height: 60px;
     width: 100%;
     background-color: whitesmoke;
     opacity: .9;
@@ -855,6 +855,8 @@ h3 {
     width: 100%;
     height: 200px;
     background-color: rgba(206, 206, 206, 0.736);
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
@@ -876,10 +878,10 @@ h1 {
 .midden1 {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
     margin-top: 20px;
-    flex-wrap: wrap;
 }
 
 .submitbutton1 {
@@ -1117,4 +1119,88 @@ h1 {
     .text {
         font-size: 11px
     }
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: rgb(232, 79, 79);
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(232, 79, 79);
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: rgb(232, 79, 79);
+}
+
+.white {
+    background-color: whitesmoke;
+}
+
+.col1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.col2 {
+    display: flex;
+    justify-content: center;
+}
+
+.white1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.white2 {
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.839);
+}
+
+.rating {
+    width: 180px;
+}
+
+.rating__star {
+    cursor: pointer;
+    color: #dabd18b2;
+}
+
+.submit44 {
+    width: 200px;
+    background-color: whitesmoke;
+}
+
+.blok987 {
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.719);
+    display: flex;
+    justify-content: center;
 }

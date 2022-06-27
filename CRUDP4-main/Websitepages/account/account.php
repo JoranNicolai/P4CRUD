@@ -79,7 +79,7 @@ if(isset($_GET["action"]))
                 echo "<a href='./../account/login.php'>Login</a>";
             }
         ?>
-            <?php
+                    <?php
         if (isAdmin()) {
             echo "<a href='../../admin/admin.php'>Admin</a>";
             } elseif (isLoggedIn()) {
@@ -98,6 +98,7 @@ if(isset($_GET["action"]))
             <div class="profile-info-container">
                 <?php
         if (isLoggedIn()) {
+           
             $userName = $_SESSION['user']['username'];
                 echo "<h2 class='profile-username'>Welcome $userName!</h2>"; 
             }
@@ -105,6 +106,11 @@ if(isset($_GET["action"]))
                 echo "<h2 class='profile-username'>Welcome to corendon!</h2>"; 
             }
         ?>
+
+
+
+
+
             </div>
         </header>
         <header class="headerblokjes">
@@ -117,10 +123,14 @@ if(isset($_GET["action"]))
                 </div>
             </div>
         </header>
-        
-        <div class="midden1">
-            
-            <?php
+        <div class="backgroundlol">
+            <div class="white2">
+                <h1 class="white1">Account gegevens & Geboekte vluchten</h1>
+            </div>
+            <div class="white3">
+                <div class="col2">
+
+                    <?php
     
         if (isset($_POST["submit"])) {
             if (!empty($_POST["search"])) {
@@ -140,51 +150,69 @@ if(isset($_GET["action"]))
             {
                 ?>
 
+                        </form>
 
-                <div class="col-md-41">
-                <div>
-                        <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px; ">
-<div>                       <h1>Jouw gegevens</h1>
-                            <h4 class="text-info">
-                                Username: <?php echo $row["username"]; ?>
-                            </h4>
-                            <h4 class="text-danger">Email:
-                                <?php echo $row["email"]; ?>
-                            </h4>
-                            <h4 class="text-danger">Password:
-                                <?php echo $row["password"]; ?>
-                            </h4>
-                            <h4 class="text-danger">Id:
-                                <?php echo $row["id"]; ?>
-                            </h4>
-                          
-                           
-                      </div>
-                     
-                    </form>
-                   
                 </div>
+                <div class="col2">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>username</th>
+                                <th>Email</th>
+                                <th>Password</th>
 
 
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="white">
+                                    <?php echo $row["username"]; ?>
+                                </td>
+                                <td class="white">
+                                    <?php echo $row["email"]; ?>
+                                </td>
+                                <td class="white">
+                                    <?php echo $row["password"]; ?>
+                                </td>
+
+
+
+
+
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
                 <?php
             }
         }
         ?>
 
-<?php
+            </div>
+            <div class="white2">
+
+            </div>
+            <div class="col2">
+                
+                <?php
     
     if (isset($_POST["submit"])) {
         if (!empty($_POST["search"])) {
             $sessionID = $_SESSION["user"]["id"];
-            $query = "SELECT * FROM boekingen WHERE userID = 10";
+            $query = "SELECT] * FROM boekingen WHERE userID = '$sessionID'";
             return;
         } else {
             $sessionID = $_SESSION["user"]["id"];
-            $query = "SELECT * FROM boekingen WHERE userID = 10";
+            $query = "SELECT * FROM boekingen WHERE userID = '$sessionID'";
         }
     } else {
         $sessionID = $_SESSION["user"]["id"];
-        $query = "SELECT * FROM boekingen WHERE userID = 10";
+        $query = "SELECT * FROM boekingen WHERE userID = '$sessionID'";
     }
 
     $result = mysqli_query($connect, $query);
@@ -195,50 +223,88 @@ if(isset($_GET["action"]))
             ?>
 
 
-            <div class="col-md-42">
-            <div>
-                    <div style="border:1px solid transparant; background-color:ghostwhite; border-radius:2px; padding:16px; ">
-<div>                       <h1>Jouw Boekingen</h1>
 
-                        <h4 class="text-info">
-                            UserID: <?php echo $row["userID"]; ?>
-                        </h4>
-                        <h4 class="text-info">
-                            UserID: <?php echo $row["userID"]; ?>
-                        </h4>
-                        <h4 class="text-danger">VluchtID:
-                            <?php echo $row["flightID"]; ?>
-                        </h4>
-                        <h4 class="text-danger">Vlucht:
-                            <?php echo $row["name"]; ?>
-                        </h4>
-                      
-                      
-                       
-                  </div>
-                 
-                </form>
-               
+
+                    </form>
+
             </div>
 
+            <div class="col1">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
 
+                            <th>Vlucht </th>
+                            <th>userID</th>
+                            <th>boekID</th>
+                            <th>vluchtID</th>
+                            <th></th>
+                            <th>Annuleren</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                    <?php 
+                                        
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            $UserID = $row['userID'];
+                                            $flightID = $row['flightID'];
+                                            $bookingID = $row['boekingID'];
+                                            $name = $row['name'];
+                                ?>
+                            <tr>
+                                <td class="white">
+                                    <?php echo $UserID ?>
+                                </td>
+                                <td class="white">
+                                    <?php echo $flightID ?>
+                                </td>
+                                <td class="white">
+                                    <?php echo $bookingID ?>
+                                </td>
+                                <td class="white">
+                                    <?php echo $name ?>
+                                    <td class="white">
+                                    <td class="white">
+                                    <?php
+                                                echo '<a href="../../admin/delete_boeking.php?boekingID='. $bookingID .'" class="mr-3" title="Update Record" data-toggle="tooltip">Annuleren<span class="fa fa-pencil"></span></a>';
+                                                
+                                                ?>
+                                </td>
+                            </tr>
+                            <?php 
+                                        }  
+                                ?>
+            </div>
+
+            <?php
+  
+  if (isset($_POST['submit44'])) {
+      echo "GeeksforGeeks";
+  }
+  ?>
             <?php
         }
     }
     ?>
         </div>
+        </div>
+        </div>
+        </div>
         <div class="blok1 ">
 
         </div>
-       
 
-       
+
+
 
 
 
 
 
     </body>
-   
+
     <script src="../../js/main.js"></script>
+
     </html>

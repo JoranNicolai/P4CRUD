@@ -1,0 +1,1 @@
+<H1>bent u uw wachtwoord vergeten of wilt u uw wachtwoord wijzigingen, stuur dan een mail naar de admin via de <a href="../contact.php">contact pagina</a></H1>

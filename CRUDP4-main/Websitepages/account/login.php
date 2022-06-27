@@ -59,7 +59,7 @@
                         <label for="password">Password</label>
                         <input type="password" name="password">
                         <input type="submit" id="submit" name="login" value="Submit">
-                        <a class="register" href="./forgot.php">Forgot password?</a>.</div>
+                        <a class="register" href="vraagadmin.php">Forgot password?</a>.</div>
                 </form>
             </div>
         </div>
