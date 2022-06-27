@@ -27,6 +27,7 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
         <a href="vluchten.php">Vluchten</a>
         <a href="overons.php">Over ons</a>
         <a href="reviews.php">Reviews</a>
+        <a href="locaties.php">Locaties</a>
         <a href="contact.php">Contact</ a>    <?php
         if (!isLoggedIn()) {
                 echo "<a href='./account/login.php'>Login</a>";
@@ -124,16 +125,24 @@ $connect = mysqli_connect("localhost", "root", "", "crudp4");
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="r">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
                 </select>
                 <label for="land">Land</label>
                 <select id="land" name="land">
                     <option value="Spanje">spanje</option>
-                    <option value="Duitsland">rusland</option>
-                    <option value="België">noord-korea</option>
-                    <option value="Dubai">zuid-korea</option>
-                    <option value="Griekenland">Polen</option>
-                    <option value="Zweden">spanje</option>
+                    <option value="Duitsland">Duitsland</option>
+                    <option value="België">België</option>
+                    <option value="Dubai">Dubai</option>
+                    <option value="Griekenland">Griekenland</option>
+                    <option value="Zweden">Zweden</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Turkije">Turkije</option>
+                    
                 </select>
                 <label for="subject">Review</label>
                 <input type="text" name="subject">

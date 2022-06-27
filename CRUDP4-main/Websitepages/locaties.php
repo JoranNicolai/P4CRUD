@@ -123,8 +123,7 @@
 
 
 
-<div id ="myContainer">
-<div id ="myAnimation">✈</div>
+
 </div>
 
 
@@ -132,31 +131,15 @@
 
     </body>
 
-<div class="displayflex">
-<div class="container222">
 
-<div class="container">
 
-<form action="https://formsubmit.co/jorannicolai@gmail.com" method="post">
-    <h1>Contact</h1>
-        <label for="fname">Naam</label>
-        <input type="text" id="fname" name="firstname" placeholder="Jouw naam...">
-        <label for="lname">E-mail</label>
-        <input type="text" id="lname" name="lastname" placeholder="Jouw E-mail...">
-        <label class="subject" for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Wat wilt u sturen?..." style="height:200px"></textarea>
-
-        <input class="sumbit1" type="submit" value="Submit">
- 
+    
+        <div style="width: 100%"><iframe width="100%" height="1000px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=nl&amp;q=heyendaalseweg%2098+(CorendonS)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">gps watches</a></iframe></div>
     </form>
   
-</div>
-</div>
-</div>
-<div class="blok30"></div>     
 
-</body>
-<script src="../js/main.js"></script>
+
+
 </html>
 </body>
 </html>

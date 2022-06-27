@@ -22,6 +22,7 @@ if (isset($_POST["add_to_cart"])) {
 
     $query = "INSERT INTO boekingen (flightID, userID, name) VALUES ('$flightID', '$userID', '$location')";
     if ($connect->query($query) === TRUE) {
+        header('location: bedanktvoor.php');
     } else {
         echo "Error updating record: " . $connect->error;
     }
@@ -48,6 +49,7 @@ if (isset($_POST["add_to_cart"])) {
             <a href="vluchten.php">Vluchten</a>
             <a href="overons.php">Over ons</a>
             <a href="reviews.php">Reviews</a>
+            <a href="locaties.php">Locaties</a>
             <a href="contact.php">Contact</a>
             <?php
             if (!isLoggedIn()) {

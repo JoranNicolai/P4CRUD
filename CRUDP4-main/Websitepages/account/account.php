@@ -238,7 +238,8 @@ if(isset($_GET["action"]))
                             <th>userID</th>
                             <th>boekID</th>
                             <th>vluchtID</th>
-                            <th>Anuleren</th>
+                            <th></th>
+                            <th>Annuleren</th>
                         </tr>
                     </thead>
                     
@@ -253,21 +254,21 @@ if(isset($_GET["action"]))
                                             $name = $row['name'];
                                 ?>
                             <tr>
-                                <td>
+                                <td class="white">
                                     <?php echo $UserID ?>
                                 </td>
-                                <td>
+                                <td class="white">
                                     <?php echo $flightID ?>
                                 </td>
-                                <td>
+                                <td class="white">
                                     <?php echo $bookingID ?>
                                 </td>
-                                <td>
+                                <td class="white">
                                     <?php echo $name ?>
-                                </td>
-                                <td>
+                                    <td class="white">
+                                    <td class="white">
                                     <?php
-                                                echo '<a href="../../admin/delete_boeking.php?boekingID='. $bookingID .'" class="mr-3" title="Update Record" data-toggle="tooltip">sup<span class="fa fa-pencil"></span></a>';
+                                                echo '<a href="../../admin/delete_boeking.php?boekingID='. $bookingID .'" class="mr-3" title="Update Record" data-toggle="tooltip">Annuleren<span class="fa fa-pencil"></span></a>';
                                                 
                                                 ?>
                                 </td>

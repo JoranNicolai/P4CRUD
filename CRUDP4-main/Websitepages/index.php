@@ -26,6 +26,7 @@
                 <a href="vluchten.php">Vluchten</a>
                 <a href="overons.php">Over ons</a>
                 <a href="reviews.php">Reviews</a>
+                <a href="locaties.php">Locaties</a>
                 <a href="contact.php">Contact</a>
                 <?php
         if (!isLoggedIn()) {
