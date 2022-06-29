@@ -133,14 +133,24 @@ if(isset($_GET["action"]))
                     <?php
     
         if (isset($_POST["submit"])) {
-            if (!empty($_POST["search"])) {
-                $query = "SELECT * FROM users WHERE username = '$userName'";
-                return;
-            } else {
-                $query = "SELECT * FROM users WHERE username = '$userName'";
-            }
         } else {
-            $query = "SELECT * FROM users WHERE username = '$userName'";
+            $sql = "SELECT * FROM users WHERE username=?";
+            if($stmt = mysqli_prepare($db, $sql)){
+                // Bind variables to the prepared statement as parameters
+                mysqli_stmt_bind_param($stmt, "s", $username);
+                
+                // Set parameters
+                $username = $userName;
+                
+                // Attempt to execute the prepared statement
+                if(mysqli_stmt_execute($stmt)){
+                    // Records updated successfully. Redirect to landing page
+                    // header("location: account.php");
+                    // exit();
+                } else{
+                    echo "Oops! Something went wrong. Please try again later.";
+                }
+            }
         }
 
         $result = mysqli_query($connect, $query);
@@ -204,7 +214,7 @@ if(isset($_GET["action"]))
     if (isset($_POST["submit"])) {
         if (!empty($_POST["search"])) {
             $sessionID = $_SESSION["user"]["id"];
-            $query = "SELECT] * FROM boekingen WHERE userID = '$sessionID'";
+            $query = "SELECT * FROM boekingen WHERE userID = '$sessionID'";
             return;
         } else {
             $sessionID = $_SESSION["user"]["id"];

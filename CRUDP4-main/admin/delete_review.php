@@ -1,12 +1,22 @@
 <?php
 include_once '../php/functions.php';
-$sql = "DELETE FROM reviews WHERE id='" . $_GET["id"] . "'";
-if (mysqli_query($db, $sql)) {
-    echo "Record deleted successfully";
-} else {
-    echo "Error deleting record: " . mysqli_error($db);
+$sql = "DELETE FROM reviews WHERE id=?";
+if($stmt = mysqli_prepare($db, $sql)){
+    // Bind variables to the prepared statement as parameters
+    mysqli_stmt_bind_param($stmt, "i", $param_id);
+    
+    // Set parameters
+    $param_id = $_GET["id"];
+    
+    // Attempt to execute the prepared statement
+    if(mysqli_stmt_execute($stmt)){
+        // Records updated successfully. Redirect to landing page
+        header("location: admin.php");
+        exit();
+    } else{
+        echo "Oops! Something went wrong. Please try again later.";
+    }
 }
-header('location: ../admin/admin.php');
 mysqli_close($db);
 ?>
 <?php 
